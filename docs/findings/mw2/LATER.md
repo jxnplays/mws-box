@@ -130,7 +130,7 @@ Tools searched for on this machine:
 
 | Tool | Present | Location | Result |
 |------|---------|----------|--------|
-| ZoneTool | yes | `[local path] Owens\AppData\Local\Temp\opencode\tools\zonetool\zonetool.exe` | Not usable for IW4 |
+| ZoneTool | yes | `[local path] [local path]\Local\Temp\opencode\tools\zonetool\zonetool.exe` | Not usable for IW4 |
 | OpenAssetTools Unlinker | yes | `[local path] of Duty 3\output\findings\mw3\tools\oat\Unlinker.exe` | Crashes on both target files |
 | `oat.exe` | no | — | not in source |
 | `UnrealPackageTool.exe` | no | — | not in source |
