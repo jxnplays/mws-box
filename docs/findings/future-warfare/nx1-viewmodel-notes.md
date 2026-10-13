@@ -1,28 +1,28 @@
 # NX1 Fastfile and Viewmodel Notes
 ## Private working document — not for publication
 
-**Status:** Geometry loads. Textures resolve. Sounds, animations, camo, and menu icon not wired.  
-**Goal:** One real NX1 gun that feels native in IW4L — 1:1 with its Future Warfare counterpart, matching how MW3 and BO1 guns already work.  
-**Scope:** Call of Duty Future Warfare (NX1) multiplayer assets, starting with the SCAR Mod 2.  
-**Constraint:** Bounded reads only. No full unpack scans. No invented structs. No DeflateStream calls during mapping.
+**Status:** One weapon (SCAR Mod 2) is playable in the client. It renders, aims, fires, reloads, and swaps. NX1 textures are not yet bound (donor textures are used). Sounds are not wired.  
+**Goal:** One real NX1 gun that feels native in IW4L.  
+**Scope:** Call of Duty Future Warfare (NX1) multiplayer assets, starting with the SCAR Mod 2.
 
 ### Live progress
 
-| Area                       | %    | Notes |
-|----------------------------|------|-------|
-| Fastfile header / NXffs100 | ~85% | Marker location closed. SP zlib-at-38 set closed (5/5 files with zlib at offset 38 decode). Offset-38 big-endian dword points to zlib stream in tested SP/MP files. Body partially typed; ten key-at-38 MP files unread at offset 38. |
-| Load-file template         | ~80% | 86-byte layout, vary positions, and repeating slots closed. |
-| .cast / viewmodel body     | ~76% | Position block fully counted (7,292 groups). Sixteen consecutive 3-group 12-byte runs closed. Gap and face indices still open. |
-| Geometry in client         | ~85% | `match_walk.rs` inserts both `viewmodel_scar2_LOD0.cast` and `weapon_scar2_LOD0.cast` from the saluki export into fpv and world spaces. Model is visible in first person. |
-| Textures in client         | 100% | Scar2 color and specular IWIs packaged in `nx1_scar2_images.iwd` (1,049,150 bytes), placed in `main\\`. Resolution chain closed. Malformed-archive risk in `main\\` unverified. |
-| Sounds in client           | ~15% | Three common_sound_*.ffm (common_sound_iw4_mp.ffm, common_sound_nx1_lunar_mp.ffm, common_sound_nx1_mp.ffm) in key-at-38 group with zlib headers at offset 38. Identified as remaining SP 78 01 group members after development.ffm. No full inflate completed; not decoded to named assets. No XMA2 or other sound containers extracted from any MP file. 9 scar2 WAVs exist under `sounds/weapons/scar2/` but not packaged. Client has `IwdSoundIndex`. In-game gun uses M4 sounds. |
-| Animations in client       | 0%   | No NX1 XAnims loaded. Client has full XAnim support for MW3/BO1. Scar2 raise/reload/fire clips not located or bound. |
-| Camo support               | 0%   | Client has `weapon_camo.rs` for MW3/BO1. No NX1 camo materials or masks wired. Scar2 body material has no camo slot. Camo menu shows IW4 options. |
-| Create-a-class icon        | 0%   | SCAR2 appears in the assault rifle list with an asterisk (`*SCAR2`). No weapon image in the class editor preview. Class name shows as `M4 ASSAULT`. |
-| Weapon definition / stats  | 0%   | Scar2 is registered from .cast geometry only. No real NX1 fire rate, damage, recoil, or category data bound. Falls back to default. |
-| One real NX1 gun in IW4L   | ~35% | Geometry and textures closed. Model is in hands. Sounds identified (zlib at 38 on common_sound) but not inflated to assets. Animations, camo, menu icon, and stats not started. Gun does not feel native. |
+| Area | % | Notes |
+| --- | --- | --- |
+| Namespace / DLC plumbing | 100% | Top-level NX1 category. SCAR Mod 2 selectable as `nx1:weapon/scar2_mp`. |
+| .cast mesh reader | 100% | Skeleton, geometry, and tags parse. |
+| .cast animation reader | 100% | All 59 clips for the test weapon parse. |
+| .cast material reader | 100% | Surfaces and PNG maps extracted. |
+| Animation binding | 100% | Clips bound, including idle. |
+| Viewmodel rig | 100% | NX1 hands placed and in the draw plan. |
+| Playable in game | ~95% | Renders, aims, fires, reloads, and swaps. |
+| NX1 textures on gun | ~40% | Reader and loader work. Binding still uses donor textures. A material row minted in the walk is not equivalent to a retail row for FPV draw. |
+| NX1 sounds | 0% | WAVs staged, not wired. |
+| Generalise to all guns | ~10% | Reader is gun-agnostic. Wiring is still specific to the test weapon. |
+| Maps | 0% | Not started. |
 
-*Table updated after audio identification session 2026-10-10. common_sound zlib-at-38 identified, not inflated. SP zlib-at-38 closed. Geometry and textures closed. Everything else open.*
+One playable weapon is roughly 70% complete. The reusable reader and converter work is roughly 90% complete. The main open problem is texture binding in first-person view.
+
 
 ---
 
