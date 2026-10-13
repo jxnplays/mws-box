@@ -417,405 +417,405 @@ Total: 871
 0x0051c8: mp_mayenne.ng.atrbb
 0x005260: mp_mayenne.us.xenon.mp.fli
 0x00527c: c:\cod\obj\assets\image\mp_mayenne\mp_mayenne.xenon.ib
-0x0052b4: C:\cod\obj\assets\assets\textures\common\ng\blackish_c.xetex
-0x0052f4: C:\cod\obj\assets\assets\textures\common\ng\blackish_n.xetex
-0x005334: C:\cod\obj\assets\assets\textures\common\ng\blackish_s.xetex
-0x005374: C:\cod\obj\assets\assets\textures\trim\brick\NG\brick$us_ridged_trim_c.xetex
-0x0053c4: C:\cod\obj\assets\assets\textures\trim\brick\NG\brick$us_ridged_trim_h.xetex
-0x005414: C:\cod\obj\assets\assets\textures\trim\brick\NG\brick$us_ridged_trim_n.xetex
-0x005464: C:\cod\obj\assets\assets\textures\trim\brick\NG\brick$us_ridged_trim_s.xetex
-0x0054b4: C:\cod\obj\assets\assets\characters\US\heroes\dixon\textures\c_dixon_camo_c.xetex
-0x005508: C:\cod\obj\assets\assets\characters\US\heroes\dixon\textures\c_dixon_camo_n.xetex
-0x00555c: C:\cod\obj\assets\assets\characters\US\heroes\dixon\textures\c_dixon_camo_s.xetex
-0x0055b0: C:\cod\obj\assets\assets\characters\c_generic_bodysw_n.xetex
-0x0055f0: C:\cod\obj\assets\assets\characters\c_generic_headsw_n.xetex
-0x005630: C:\cod\obj\assets\assets\characters\c_generic_headsw_s.xetex
-0x005670: C:\cod\obj\assets\assets\characters\c_generic_helmsw_s.xetex
-0x0056b0: C:\cod\obj\assets\assets\characters\MP_GEar\c_MP_gear_a.xetex
-0x0056f0: C:\cod\obj\assets\assets\characters\MP_GEar\c_MP_gear_c.xetex
-0x005730: C:\cod\obj\assets\assets\characters\MP_GEar\c_MP_gear_n.xetex
-0x005770: C:\cod\obj\assets\assets\characters\MP_GEar\c_MP_gear_s.xetex
-0x0057b0: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_body1MP_a.xetex
-0x005810: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_bodyMP_c.xetex
-0x005870: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_bodyMP_n.xetex
-0x0058d0: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_bodyMP_s.xetex
-0x005930: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_head1_c.xetex
-0x00598c: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_head1_n.xetex
-0x0059e8: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_head1_s.xetex
-0x005a44: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_head1MP_c.xetex
-0x005aa4: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_head1MP_n.xetex
-0x005b04: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_head1MP_s.xetex
-0x005b64: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_head2_c.xetex
-0x005bc0: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_head3_c.xetex
-0x005c1c: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_head3MP_c.xetex
-0x005c7c: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_helmMP_c.xetex
-0x005cdc: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_helmMP_n.xetex
-0x005d3c: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_helmMP_s.xetex
-0x005d9c: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_radio_c.xetex
-0x005df8: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_radio_n.xetex
-0x005e54: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_radio_s.xetex
-0x005eb0: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\c_wrmcht_bodyMP_a.xetex
-0x005f04: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\c_wrmcht_bodyMP_n.xetex
-0x005f58: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\c_wrmcht_bodyMP_s.xetex
-0x005fac: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\c_wrmcht_head_n.xetex
-0x005ffc: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\c_wrmcht_head_s.xetex
-0x00604c: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\c_wrmcht_headMP_n.xetex
-0x0060a0: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\c_wrmcht_headMP_s.xetex
-0x0060f4: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\c_wrmcht_helm1MP_n.xetex
-0x006148: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\c_wrmcht_helm1MP_s.xetex
-0x00619c: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\c_wrmcht_helm2MP_n.xetex
-0x0061f0: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\c_wrmcht_helm2MP_s.xetex
-0x006244: C:\cod\obj\assets\assets\characters\US\soldiers\NextGenTest\textures\Canyon2.xetex
-0x006298: C:\cod\obj\assets\assets\particles\_textures_cod3\cockroach_CG.xetex
-0x0062e0: C:\cod\obj\assets\assets\detail_maps\concrete\concrete$smooth_holes_n.xetex
-0x00632c: C:\cod\obj\assets\assets\detail_maps\concrete\concrete$tiny_bumps_n.xetex
-0x006378: C:\cod\obj\assets\assets\particles\_textures_cod3\debris_arc_CG.xetex
-0x0063c0: C:\cod\obj\assets\assets\particles\_textures_cod3\debris_clump_CG.xetex
-0x006408: C:\cod\obj\assets\assets\particles\_textures_cod3\debris_gib_CG.xetex
-0x006450: C:\cod\obj\assets\assets\particles\_textures_cod3\debris_glass.xetex
-0x006498: C:\cod\obj\assets\assets\particles\_textures_cod3\debris_plume_CG.xetex
-0x0064e0: C:\cod\obj\assets\assets\textures\decals\NG\decal$br_02_cobweb02_small_c.xetex
-0x006530: C:\cod\obj\assets\assets\textures\foliage\_decals\NG\decal$br_02_ivy04_c.xetex
-0x006580: C:\cod\obj\assets\assets\textures\decals\impact\decal$bullet_dirt.xetex
-0x0065c8: C:\cod\obj\assets\assets\textures\decals\impact\decal$bullet_dirt_a.xetex
-0x006614: C:\cod\obj\assets\assets\textures\decals\impact\decal$concrete_bullet_a.xetex
-0x006664: C:\cod\obj\assets\assets\textures\decals\impact\decal$fabric_bullet_a.xetex
-0x0066b0: C:\cod\obj\assets\assets\textures\decals\impact\decal$generic_bullet_a.xetex
-0x006700: C:\cod\obj\assets\assets\textures\decals\impact\decal$metal_bullet_a.xetex
-0x00674c: C:\cod\obj\assets\assets\textures\decals\impact\decal$plaster_bullet_a.xetex
-0x00679c: C:\cod\obj\assets\assets\textures\decals\impact\decal$rock_bullet_a.xetex
-0x0067e8: C:\cod\obj\assets\assets\textures\decals\grunge_destruction\NG\decal$us_cracks_holes_c.xetex
-0x006848: C:\cod\obj\assets\assets\textures\decals\grunge_destruction\NG\decal$us_cracks_holes_n.xetex
-0x0068a8: C:\cod\obj\assets\assets\textures\decals\grunge_destruction\NG\decal$us_cracks_holes_s.xetex
-0x006908: C:\cod\obj\assets\assets\textures\decals\impact\decal$wood_bullet_a.xetex
-0x006954: C:\cod\obj\assets\assets\particles\_textures_cod3\exp_anim_fireball_NG.xetex
-0x0069a4: C:\cod\obj\assets\assets\particles\_textures_cod3\exp_gen_CG.xetex
-0x0069e8: C:\cod\obj\assets\assets\particles\_textures_cod3\exp_vert_CG.xetex
-0x006a2c: C:\cod\obj\assets\assets\particles\_textures_cod3\fire_anim_burst_NG.xetex
-0x006a78: C:\cod\obj\assets\assets\particles\_textures_cod3\fire_anim_candle_NG.xetex
-0x006ac4: C:\cod\obj\assets\assets\particles\_textures_cod3\fire_anim_sm_NG.xetex
-0x006b0c: C:\cod\obj\assets\assets\particles\_textures_cod3\fire_gen_CG.xetex
-0x006b50: C:\cod\obj\assets\assets\props_cod3\Lights\textures_ng\flames.xetex
-0x006b94: C:\cod\obj\assets\assets\particles\_textures_cod3\fly_CG.xetex
-0x006bd4: C:\cod\obj\assets\assets\levels\mp_mayenne\sky\fogramp.xetex
-0x006c14: C:\cod\obj\assets\assets\props_cod3\Environmental\textures\foliage$cull.xetex
-0x006c64: C:\cod\obj\assets\assets\props_cod3\Environmental\textures_ng\foliage_masked$genericshrubfull_c.xetex
-0x006ccc: C:\cod\obj\assets\assets\props_cod3\Environmental\textures_ng\foliage_masked$hedgerow_nd_c.xetex
-0x006d30: C:\cod\obj\assets\assets\particles\_textures_cod3\fx_gen_CG.xetex
-0x006d74: C:\cod\obj\assets\assets\particles\_meshes\pfx_generic\gib_generic.xetex
-0x006dc0: C:\cod\obj\assets\assets\props_cod3\Lights\textures_ng\glass$lanternglass_c.xetex
-0x006e14: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\glass$winebottle_red_c.xetex
-0x006e7c: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\glass$winebottle_red_n.xetex
-0x006ee4: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\glass$winebottle_red_s.xetex
-0x006f4c: C:\cod\obj\assets\assets\particles\_textures_cod3\leaves_CG.xetex
-0x006f90: C:\cod\obj\assets\assets\levels\mp_mayenne\nextgen\lightmaps\lm0002.xetex
-0x006fdc: C:\cod\obj\assets\assets\levels\mp_mayenne\sky\mayenne_bkgd.xetex
-0x007020: C:\cod\obj\assets\assets\levels\mp_mayenne\sky\mayenne_cl_btm.xetex
-0x007064: C:\cod\obj\assets\assets\levels\mp_mayenne\sky\mayenne_cl_sun.xetex
-0x0070a8: C:\cod\obj\assets\assets\props_cod3\Lights\textures_ng\metal$lanternbody_c.xetex
-0x0070fc: C:\cod\obj\assets\assets\props_cod3\Lights\textures_ng\metal$lanternbody_n.xetex
-0x007150: C:\cod\obj\assets\assets\props_cod3\Lights\textures_ng\metal$lanternbody_s.xetex
-0x0071a4: C:\cod\obj\assets\assets\props_cod3\Lights\textures_ng\metal$mil_lamp_post_c.xetex
-0x0071f8: C:\cod\obj\assets\assets\props_cod3\Lights\textures_ng\metal$mil_lamp_post_n.xetex
-0x00724c: C:\cod\obj\assets\assets\props_cod3\Lights\textures_ng\metal$mil_lamp_post_s.xetex
-0x0072a0: C:\cod\obj\assets\assets\props_cod3\MP\textures_ng\metal$mp_flagstand_c.xetex
-0x0072f0: C:\cod\obj\assets\assets\props_cod3\MP\textures_ng\metal$mp_flagstand_n.xetex
-0x007340: C:\cod\obj\assets\assets\props_cod3\MP\textures_ng\metal$mp_flagstand_s.xetex
-0x007390: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\metal$p_lvl_candleholder_c.xetex
-0x0073fc: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\metal$p_lvl_candleholder_n.xetex
-0x007468: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\metal$p_lvl_candleholder_s.xetex
-0x0074d4: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\metal$p_lvl_chain_c.xetex
-0x007538: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\metal$p_lvl_chain_n.xetex
-0x00759c: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\metal$p_lvl_chain_s.xetex
-0x007600: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\metal$p_lvl_sword_shield_c.xetex
-0x00766c: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\metal$p_lvl_sword_shield_n.xetex
-0x0076d8: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\metal$p_lvl_sword_shield_s.xetex
-0x007744: C:\cod\obj\assets\assets\detail_maps\metal\metal$plain_smooth_n.xetex
-0x00778c: C:\cod\obj\assets\assets\props_cod3\Equipment_and_Machinery_Tools\textures_ng\metal$radio_01_c.xetex
-0x0077f4: C:\cod\obj\assets\assets\props_cod3\Equipment_and_Machinery_Tools\textures_ng\metal$radio_01_n.xetex
-0x00785c: C:\cod\obj\assets\assets\props_cod3\Equipment_and_Machinery_Tools\textures_ng\metal$radio_01_s.xetex
-0x0078c4: C:\cod\obj\assets\assets\particles\_textures_cod3\moth_CG.xetex
-0x007904: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\of_c_wrmcht_bodyMP_c.xetex
-0x007958: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\of_c_wrmcht_head2_c.xetex
-0x0079ac: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\of_c_wrmcht_head3_c.xetex
-0x007a00: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\of_c_wrmcht_head3MP_c.xetex
-0x007a58: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\of_c_wrmcht_head_c.xetex
-0x007aac: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\of_c_wrmcht_headMP_c.xetex
-0x007b00: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\of_c_wrmcht_helm1MP_c.xetex
-0x007b58: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\of_c_wrmcht_helm2MP_c.xetex
-0x007bb0: C:\cod\obj\assets\assets\particles\_meshes\pfx_brass\pfx_brass.xetex
-0x007bf8: C:\cod\obj\assets\assets\particles\_meshes\pfx_concrete\pfx_concrete.xetex
-0x007c44: C:\cod\obj\assets\assets\particles\_meshes\pfx_dirt\pfx_dirt.xetex
-0x007c88: C:\cod\obj\assets\assets\particles\_meshes\pfx_grass\pfx_grass.xetex
-0x007cd0: C:\cod\obj\assets\assets\particles\_meshes\pfx_wood\pfx_wood.xetex
-0x007d14: C:\cod\obj\assets\assets\textures\walls_n_facades\plaster\NG\plaster$ca_whte_plstr_bt_c.xetex
-0x007d74: C:\cod\obj\assets\assets\textures\walls_n_facades\plaster\NG\plaster$ca_whte_plstr_bt_n.xetex
-0x007dd4: C:\cod\obj\assets\assets\textures\walls_n_facades\plaster\NG\plaster$ca_whte_plstr_bt_s.xetex
-0x007e34: C:\cod\obj\assets\assets\particles\_textures_cod3\shimmer_NG.xetex
-0x007e78: C:\cod\obj\assets\assets\particles\_textures_cod3\smk_def_CG.xetex
-0x007ebc: C:\cod\obj\assets\assets\particles\_textures_cod3\smk_exit_CG.xetex
-0x007f00: C:\cod\obj\assets\assets\particles\_textures_cod3\smk_gen_blk_CG.xetex
-0x007f48: C:\cod\obj\assets\assets\particles\_textures_cod3\smk_gen_CG.xetex
-0x007f8c: C:\cod\obj\assets\assets\particles\_textures_cod3\smk_tendril_CG.xetex
-0x007fd4: C:\cod\obj\assets\assets\particles\_textures_cod3\vert_gen_CG.xetex
-0x008018: C:\cod\obj\assets\assets\particles\_textures_cod3\vlight_beam_CG.xetex
-0x008060: C:\cod\obj\assets\assets\props_cod3\MP\textures_ng\W_Flag_staff_3dp_n.xetex
-0x0080ac: C:\cod\obj\assets\assets\props_cod3\MP\textures_ng\W_Flag_staff_3dp_s.xetex
-0x0080f8: C:\cod\obj\assets\assets\particles\_textures_cod3\water_drop_CG.xetex
-0x008140: C:\cod\obj\assets\assets\particles\_textures_cod3\water_gen_CG.xetex
-0x008188: C:\cod\obj\assets\assets\particles\_textures_cod3\winedrops.xetex
-0x0081cc: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$ammo_box03_c.xetex
-0x008220: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$ammo_box03_n.xetex
-0x008274: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$ammo_box03_s.xetex
-0x0082c8: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$ammo_box03a_c.xetex
-0x00831c: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$ammo_box03a_n.xetex
-0x008370: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$ammo_box03a_s.xetex
-0x0083c4: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$ammo_box_stain03_a.xetex
-0x008420: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$ammo_box_stain03a_a.xetex
-0x00847c: C:\cod\obj\assets\assets\props_cod3\Containers\textures\wood$barrel_old_large.xetex
-0x0084d0: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\wood$chair_c.xetex
-0x008530: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\wood$chair_n.xetex
-0x008590: C:\cod\obj\assets\assets\props_cod3\Furniture_and_Decoratives\textures_ng\wood$chair_s.xetex
-0x0085f0: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$crate_barrel_c.xetex
-0x008648: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$crate_barrel_n.xetex
-0x0086a0: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$crate_barrel_s.xetex
-0x0086f8: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$misc_crate_a_a.xetex
-0x008750: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$misc_crate_a_c.xetex
-0x0087a8: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$misc_crate_a_n.xetex
-0x008800: C:\cod\obj\assets\assets\props_cod3\Containers\textures_ng\wood$misc_crate_a_s.xetex
-0x008858: C:\cod\obj\assets\assets\props_cod3\Environmental\textures\wood$oak_grn_single.xetex
-0x0088b0: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\textures\c_uspriv_ng_head_text.xetex
-0x008914: C:\cod\obj\assets\assets\characters\GE\Wermacht\textures\c_wrmcht_ng_head_text.xetex
-0x008d60: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_bodyMP.xemesh
-0x008dbc: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod3_bodyMP.xemesh
-0x008e18: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod4_bodyMP.xemesh
-0x008e74: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_head1.xemesh
-0x008ed0: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod3_head1.xemesh
-0x008f2c: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod4_head1.xemesh
-0x008f88: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_gearHA.xemesh
-0x008fe4: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod3_gearHA.xemesh
-0x009040: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod4_gearHA.xemesh
-0x00909c: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_helmMP1.xemesh
-0x0090f8: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod3_helmMP1.xemesh
-0x009154: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod4_helmMP1.xemesh
-0x0091b0: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_head2.xemesh
-0x00920c: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_gearLA.xemesh
-0x009268: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod3_gearLA.xemesh
-0x0092c4: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod4_gearLA.xemesh
-0x009320: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_helmMP4.xemesh
-0x00937c: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod3_helmMP3.xemesh
-0x0093d8: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod4_helmMP3.xemesh
-0x009434: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_head3.xemesh
-0x009490: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_gearMM.xemesh
-0x0094ec: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod3_gearMM.xemesh
-0x009548: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod4_gearMM.xemesh
-0x0095a4: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_helmMPM.xemesh
-0x009600: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod3_helmMPM.xemesh
-0x00965c: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod4_helmMPM.xemesh
-0x0096b8: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_gearR.xemesh
-0x009714: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod3_gearR.xemesh
-0x009770: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod4_gearR.xemesh
-0x0097cc: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_gearS.xemesh
-0x009828: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod3_gearS.xemesh
-0x009884: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod4_gearS.xemesh
-0x0098e0: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_helmMP3.xemesh
-0x00993c: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_gearSG.xemesh
-0x009998: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod3_gearSG.xemesh
-0x0099f4: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod4_gearSG.xemesh
-0x009a50: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod2_gearAAS.xemesh
-0x009aac: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod3_gearAAS.xemesh
-0x009b08: C:\cod\obj\assets\assets\characters\US\soldiers\US_Redshirt\c_uspriv_ng_Lod4_gearAAS.xemesh
-0x009b64: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_bodyMP1.xemesh
-0x009bb4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod3_bodyMP1.xemesh
-0x009c04: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod4_bodyMP1.xemesh
-0x009c54: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_head_1.xemesh
-0x009ca4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod3_head_1.xemesh
-0x009cf4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod4_head_1.xemesh
-0x009d44: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_gearHA.xemesh
-0x009d94: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod3_gearHA.xemesh
-0x009de4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod4_gearHA.xemesh
-0x009e34: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_helmMP2.xemesh
-0x009e84: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod3_helmMP2.xemesh
-0x009ed4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod4_helmMP2.xemesh
-0x009f24: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_head_2.xemesh
-0x009f74: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_gearLA.xemesh
-0x009fc4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod3_gearLA.xemesh
-0x00a014: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod4_gearLA.xemesh
-0x00a064: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_helmMP1.xemesh
-0x00a0b4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod3_helmMP1.xemesh
-0x00a104: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod4_helmMP1.xemesh
-0x00a154: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_head_3.xemesh
-0x00a1a4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_gearMM.xemesh
-0x00a1f4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod3_gearMM.xemesh
-0x00a244: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod4_gearMM.xemesh
-0x00a294: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_helmMPM.xemesh
-0x00a2e4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod3_helmMPM.xemesh
-0x00a334: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod4_helmMPM.xemesh
-0x00a384: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_gearR.xemesh
-0x00a3d4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod3_gearR.xemesh
-0x00a424: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod4_gearR.xemesh
-0x00a474: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_gearS.xemesh
-0x00a4c4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod3_gearS.xemesh
-0x00a514: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod4_gearS.xemesh
-0x00a564: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_helmMP3.xemesh
-0x00a5b4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_gearSG.xemesh
-0x00a604: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod3_gearSG.xemesh
-0x00a654: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod4_gearSG.xemesh
-0x00a6a4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod2_gearAAS.xemesh
-0x00a6f4: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod3_gearAAS.xemesh
-0x00a744: C:\cod\obj\assets\assets\characters\GE\Wermacht\c_wrmcht_ng_Lod4_gearAAS.xemesh
-0x00a794: C:\cod\obj\assets\assets\props_cod3\furniture_and_decoratives\p_lvl_castle_lightfixture.xemesh
-0x00a7f4: C:\cod\obj\assets\assets\props_cod3\MP\p_mp_ctf_3rdperson_gr.xemesh
-0x00a838: C:\cod\obj\assets\assets\props_cod3\mp\p_mp_ctf_3rdperson_nt.xemesh
-0x00a87c: C:\cod\obj\assets\assets\props_cod3\MP\p_mp_ctf_3rdperson_us.xemesh
-0x00a8c0: C:\cod\obj\assets\assets\props_cod3\mp\p_mp_dom_flag_pole.xemesh
-0x00a904: C:\cod\obj\assets\assets\props_cod3\mp\p_mp_flagstand.xemesh
-0x00a944: C:\cod\obj\assets\assets\props_cod3\equipment_and_machinery_tools\radio01_w_glow.xemesh
-0x00a99c: C:\cod\obj\assets\assets\props_cod3\lights\p_lit_lanternon.xemesh
-0x00a9e0: C:\cod\obj\assets\assets\props_cod3\containers\p_misc_cr_rec_trpl_b.xemesh
-0x00aa2c: C:\cod\obj\assets\assets\props_cod3\containers\p_misc_cr_rec_sngl_a.xemesh
-0x00aa78: C:\cod\obj\assets\assets\props_cod3\lights\p_lamppost_military_on.xemesh
-0x00aac4: C:\cod\obj\assets\assets\props_cod3\furniture_and_decoratives\p_lvl_chandelier.xemesh
-0x00ab1c: C:\cod\obj\assets\assets\props_cod3\containers\p_lvl_german_ammo_box03.xemesh
-0x00ab6c: C:\cod\obj\assets\assets\props_cod3\containers\p_lvl_german_ammo_box01.xemesh
-0x00abbc: C:\cod\obj\assets\assets\props_cod3\containers\p_dec_barrel_wood_dbl_a.xemesh
-0x00ac0c: C:\cod\obj\assets\assets\props_cod3\furniture_and_decoratives\p_lvl_shield.xemesh
-0x00ac60: C:\cod\obj\assets\assets\props_cod3\furniture_and_decoratives\p_frn_plainchair.xemesh
-0x00acb8: C:\cod\obj\assets\assets\props_cod3\environmental\p_env_oak_grn_med_b.xemesh
-0x00ad08: C:\cod\obj\assets\assets\props_cod3\environmental\p_env_oak_grn_med_a.xemesh
-0x00ad58: C:\cod\obj\assets\assets\props_cod3\environmental\p_env_hedge_f.xemesh
-0x00ada0: C:\cod\obj\assets\assets\props_cod3\environmental\p_env_hedge_b.xemesh
-0x00ade8: C:\cod\obj\assets\assets\props_cod3\environmental\p_env_genericfull.xemesh
-0x00ae34: C:\cod\obj\assets\assets\props_cod3\containers\p_dec_barrel_wood_sngl_a.xemesh
-0x00ae84: C:\cod\obj\assets\assets\props_cod3\containers\p_dec_barrel_wood_quad_a.xemesh
-0x00aed4: C:\cod\obj\assets\assets\props_cod3\furniture_and_decoratives\p_lvl_winebottle_red3.xemesh
-0x00af30: C:\cod\obj\assets\assets\levels\mp_mayenne\sky\sky.xemesh
-0x00af6c: C:\cod\obj\assets\assets\particles\_meshes\pfx_concrete\pfx_concrete.xemesh
-0x00afb8: C:\cod\obj\assets\assets\particles\_meshes\pfx_generic\pfx_generic.xemesh
-0x00b004: C:\cod\obj\assets\assets\particles\_meshes\pfx_dirt\pfx_dirt_sm.xemesh
-0x00b04c: C:\cod\obj\assets\assets\particles\_meshes\pfx_dirt\pfx_dirt_md.xemesh
-0x00b094: C:\cod\obj\assets\assets\particles\_meshes\pfx_grass\pfx_grass_sm.xemesh
-0x00b0e0: C:\cod\obj\assets\assets\particles\_meshes\pfx_grass\pfx_grass_md.xemesh
-0x00b12c: C:\cod\obj\assets\assets\particles\_meshes\pfx_wood\pfx_wood.xemesh
-0x00b170: C:\cod\obj\assets\assets\particles\_meshes\pfx_brass\pfx_brass_rifle.xemesh
-0x00b1bc: C:\cod\obj\assets\assets\particles\_meshes\pfx_brass\pfx_brass_9mm.xemesh
-0x00b208: C:\cod\obj\assets\assets\particles\_meshes\pfx_brass\pfx_brass_45cal.xemesh
-0x00b254: C:\cod\obj\assets\assets\levels\mp_mayenne\nextgen\sbmodels\sbmodel1.xemesh
-0x00b2a0: C:\cod\obj\assets\assets\levels\mp_mayenne\nextgen\sbmodels\sbmodel2.xemesh
-0x00b2ec: C:\cod\obj\assets\assets\particles\Env\Smoke\smk_plume_tk_md_grey_f30.ng.bpeb
-0x00b33c: C:\cod\obj\assets\assets\particles\Weapon\Bullet\bullet_hmg_ice.ng.bpeb
-0x00b384: C:\cod\obj\assets\assets\particles\Env\Water\wine_stream.ng.bpeb
-0x00b3c8: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_smg_ice.ng.bpeb
-0x00b410: C:\cod\obj\assets\assets\particles\Weapon\Bullet\bullet_umg_ice.ng.bpeb
-0x00b458: C:\cod\obj\assets\assets\particles\Map\mayenne_bridge\dust_smoke_hv.ng.bpeb
-0x00b4a4: C:\cod\obj\assets\assets\particles\env\electrical\elec_light_burst.ng.bpeb
-0x00b4f0: C:\cod\obj\assets\assets\particles\Env\Electrical\elec_burst_spawn.ng.bpeb
-0x00b53c: C:\cod\obj\assets\assets\particles\env\electrical\elec_telepole_shower.ng.bpeb
-0x00b58c: C:\cod\obj\assets\assets\particles\Weapon\Artillery\artillery_concrete_low.ng.bpeb
-0x00b5e0: C:\cod\obj\assets\assets\particles\Env\Fire\fire_candle_lg_5.ng.bpeb
-0x00b628: C:\cod\obj\assets\assets\particles\Env\Fire\fire_candle_single.ng.bpeb
-0x00b670: C:\cod\obj\assets\assets\particles\Env\Fire\fire_cone_smk_sm_greydk.ng.bpeb
-0x00b6bc: C:\cod\obj\assets\assets\particles\Map\mayenne_bridge\fire_fireplace_sm_grey.ng.bpeb
-0x00b714: C:\cod\obj\assets\assets\particles\env\fire\fire_plume_smk_lg_greydk_f25.ng.bpeb
-0x00b768: C:\cod\obj\assets\assets\particles\Env\Fire\fire_plume_smk_md_greydk_f25.ng.bpeb
-0x00b7bc: C:\cod\obj\assets\assets\particles\env\fire\fire_win_smk_0x10y50z_greydk.ng.bpeb
-0x00b810: C:\cod\obj\assets\assets\particles\Bio\Insects\flys_swarm_hv_1c1c1c.ng.bpeb
-0x00b85c: C:\cod\obj\assets\assets\particles\Env\Fog\fog_dust_lt_7c7c1c_brown.ng.bpeb
-0x00b8a8: C:\cod\obj\assets\assets\particles\Map\mayenne_bridge\gfog_mist_7c7c50z_wide_myn.ng.bpeb
-0x00b904: C:\cod\obj\assets\assets\particles\Env\Fog\gfog_mist_7c7c50z_wide_thick.ng.bpeb
-0x00b954: C:\cod\obj\assets\assets\particles\Env\Leaves\leaves_breeze_fall_7x7y1c.ng.bpeb
-0x00b9a4: C:\cod\obj\assets\assets\particles\Env\Volumelight\vlight_beam_small.ng.bpeb
-0x00b9f4: C:\cod\obj\assets\assets\particles\Bio\Insects\moths_md_lantern.ng.bpeb
-0x00ba3c: C:\cod\obj\assets\assets\particles\weapon\muzzleflash\mf_cone_8_16_wday.ng.bpeb
-0x00ba8c: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_smg_wood.ng.bpeb
-0x00bad8: C:\cod\obj\assets\assets\particles\weapon\rocket\mp_rocket_concrete.ng.bpeb
-0x00bb24: C:\cod\obj\assets\assets\particles\weapon\rocket\mp_rocket_metal.ng.bpeb
-0x00bb70: C:\cod\obj\assets\assets\particles\Bio\Insects\roaches_md_lt.ng.bpeb
-0x00bbb8: C:\cod\obj\assets\assets\particles\env\smoke\smk_area_mt_r50_grey_f18.ng.bpeb
-0x00bc08: C:\cod\obj\assets\assets\particles\env\smoke\smk_chimney.ng.bpeb
-0x00bc4c: C:\cod\obj\assets\assets\particles\env\smoke\smk_line_mt_100_grey_f15.ng.bpeb
-0x00bc9c: C:\cod\obj\assets\assets\particles\env\smoke\smk_plume_tk_mega_black_f8.ng.bpeb
-0x00bcec: C:\cod\obj\assets\assets\particles\Map\mayenne_bridge\smoke_gunfighting_hv.ng.bpeb
-0x00bd40: C:\cod\obj\assets\assets\particles\Map\mayenne_bridge\smoke_gunfighting_lt.ng.bpeb
-0x00bd94: C:\cod\obj\assets\assets\particles\weapon\tracer\tracer_flak_single_glow.ng.bpeb
-0x00bde8: C:\cod\obj\assets\assets\particles\Env\Volumelight\vlight_beam_small_light.ng.bpeb
-0x00be3c: C:\cod\obj\assets\assets\particles\Map\mayenne_bridge\vlight_streak_200x80y80z.ng.bpeb
-0x00be94: C:\cod\obj\assets\assets\particles\bio\footstep\footstep_dirt.ng.bpeb
-0x00bedc: C:\cod\obj\assets\assets\particles\bio\footstep\footstep_concrete.ng.bpeb
-0x00bf28: C:\cod\obj\assets\assets\particles\bio\footstep\footstep_mud.ng.bpeb
-0x00bf70: C:\cod\obj\assets\assets\particles\bio\footstep\footstep_water.ng.bpeb
-0x00bfb8: C:\cod\obj\assets\assets\particles\weapon\artillery\artillery_dirt.ng.bpeb
-0x00c004: C:\cod\obj\assets\assets\particles\weapon\artillery\artillery_generic.ng.bpeb
-0x00c054: C:\cod\obj\assets\assets\particles\destructables\window_break_sm.ng.bpeb
-0x00c0a0: C:\cod\obj\assets\assets\particles\helpers\temp_effects\temp_explode.ng.bpeb
-0x00c0f0: C:\cod\obj\assets\assets\particles\helpers\temp_effects\temp_fire.ng.bpeb
-0x00c13c: C:\cod\obj\assets\assets\particles\helpers\Origin_Axis\origin_axis_r5_local_2sec.ng.bpeb
-0x00c198: C:\cod\obj\assets\assets\particles\helpers\Origin_Axis\origin_axis_r5_local_loop.ng.bpeb
-0x00c1f4: C:\cod\obj\assets\assets\particles\helpers\temp_effects\temp_smoke.ng.bpeb
-0x00c240: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_hmg_concrete.ng.bpeb
-0x00c290: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_hmg_cloth.ng.bpeb
-0x00c2dc: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_hmg_dirt.ng.bpeb
-0x00c328: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_smg_flesh.ng.bpeb
-0x00c374: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_smg_fleshdustonly.ng.bpeb
-0x00c3c8: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_hmg_grass.ng.bpeb
-0x00c414: C:\cod\obj\assets\assets\particles\Weapon\Bullet\bullet_hmg_metal_spawn.ng.bpeb
-0x00c464: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_hmg_metal.ng.bpeb
-0x00c4b0: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_hmg_gravel.ng.bpeb
-0x00c4fc: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_hmg_wood.ng.bpeb
-0x00c548: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_smg_concrete.ng.bpeb
-0x00c598: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_smg_cloth.ng.bpeb
-0x00c5e4: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_smg_dirt.ng.bpeb
-0x00c630: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_smg_grass.ng.bpeb
-0x00c67c: C:\cod\obj\assets\assets\particles\Weapon\Bullet\bullet_smg_metal_spawn.ng.bpeb
-0x00c6cc: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_smg_metal.ng.bpeb
-0x00c718: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_smg_gravel.ng.bpeb
-0x00c764: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_pistol_flesh.ng.bpeb
-0x00c7b4: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_umg_concrete.ng.bpeb
-0x00c804: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_umg_dirt.ng.bpeb
-0x00c850: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_umg_grass.ng.bpeb
-0x00c89c: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_umg_metal.ng.bpeb
-0x00c8e8: C:\cod\obj\assets\assets\particles\weapon\bullet\bullet_umg_wood.ng.bpeb
-0x00c934: C:\cod\obj\assets\assets\particles\weapon\grenade\grenadebounce_generic.ng.bpeb
-0x00c984: C:\cod\obj\assets\assets\particles\weapon\grenade\grenade_concrete.ng.bpeb
-0x00c9d0: C:\cod\obj\assets\assets\particles\weapon\grenade\grenade_generic.ng.bpeb
-0x00ca1c: C:\cod\obj\assets\assets\particles\weapon\grenade\grenade_dirt.ng.bpeb
-0x00ca64: C:\cod\obj\assets\assets\particles\weapon\grenade\grenade_grass.ng.bpeb
-0x00caac: C:\cod\obj\assets\assets\particles\weapon\grenade\grenade_metal.ng.bpeb
-0x00caf4: C:\cod\obj\assets\assets\particles\Trail\trail_sync_smk_sm.ng.bpeb
-0x00cb38: C:\cod\obj\assets\assets\particles\weapon\grenade\grenade_none.ng.bpeb
-0x00cb80: C:\cod\obj\assets\assets\particles\weapon\grenade\grenade_wood.ng.bpeb
-0x00cbc8: C:\cod\obj\assets\assets\particles\weapon\artillery\artillery_concrete.ng.bpeb
-0x00cc18: C:\cod\obj\assets\assets\particles\weapon\artillery\artillery_metal.ng.bpeb
-0x00cc64: C:\cod\obj\assets\assets\particles\weapon\grenade\grenade_smk.ng.bpeb
-0x00ccac: C:\cod\obj\assets\assets\particles\physics\pfx_physics_concrete.ng.bpeb
-0x00ccf4: C:\cod\obj\assets\assets\particles\physics\pfx_physics_generic.ng.bpeb
-0x00cd3c: C:\cod\obj\assets\assets\particles\physics\pfx_physics_dirt.ng.bpeb
-0x00cd80: C:\cod\obj\assets\assets\particles\physics\pfx_physics_grass.ng.bpeb
-0x00cdc8: C:\cod\obj\assets\assets\particles\physics\pfx_physics_metal.ng.bpeb
-0x00ce10: C:\cod\obj\assets\assets\particles\physics\pfx_physics_wood.ng.bpeb
-0x00ce54: C:\cod\obj\assets\assets\particles\Weapon\Brass\brass_smk_trail.ng.bpeb
-0x00ce9c: C:\cod\obj\assets\assets\particles\weapon\brass\brass_rifle.ng.bpeb
-0x00cee0: C:\cod\obj\assets\assets\particles\weapon\muzzleflash\mf_fp_b100_v.ng.bpeb
-0x00cf2c: C:\cod\obj\assets\assets\particles\weapon\muzzleflash\mf_cil_7_19_wday.ng.bpeb
-0x00cf7c: C:\cod\obj\assets\assets\particles\weapon\melee\melee_impact_a.ng.bpeb
-0x00cfc4: C:\cod\obj\assets\assets\particles\weapon\rocket\trail_bazooka.ng.bpeb
-0x00d00c: C:\cod\obj\assets\assets\particles\weapon\muzzleflash\mf_bazooka_v.ng.bpeb
-0x00d058: C:\cod\obj\assets\assets\particles\weapon\muzzleflash\mf_bazooka_w.ng.bpeb
-0x00d0a4: C:\cod\obj\assets\assets\particles\weapon\muzzleflash\mf_fp_b25_v.ng.bpeb
-0x00d0f0: C:\cod\obj\assets\assets\particles\weapon\muzzleflash\mf_fp_b75_v.ng.bpeb
-0x00d13c: C:\cod\obj\assets\assets\particles\weapon\muzzleflash\mf_m1garand_RG.ng.bpeb
-0x00d18c: C:\cod\obj\assets\assets\particles\weapon\muzzleflash\mf_fp_b50_v.ng.bpeb
-0x00d1d8: C:\cod\obj\assets\assets\particles\weapon\brass\brass_9mm.ng.bpeb
-0x00d21c: C:\cod\obj\assets\assets\particles\weapon\muzzleflash\mf_shotgun_v.ng.bpeb
-0x00d268: C:\cod\obj\assets\assets\particles\weapon\muzzleflash\mf_shotgun_w.ng.bpeb
-0x00d2b4: C:\cod\obj\assets\assets\particles\weapon\grenade\grenade_smk_trail.ng.bpeb
-0x00d300: C:\cod\obj\assets\assets\particles\weapon\grenade\grenade_RG_smktrail.ng.bpeb
-0x00d350: C:\cod\obj\assets\assets\particles\weapon\brass\brass_45cal.ng.bpeb
-0x00d394: C:\cod\obj\assets\assets\particles\env\dirt\dirt_trail_mt_lg_medbrown.ng.bpeb
-0x00d3e4: C:\cod\obj\assets\assets\particles\env\dirt\dirt_trail_mt_md_medbrown.ng.bpeb
-0x00d434: C:\cod\obj\assets\assets\particles\env\dirt\dirt_trail_mt_sm_medbrown.ng.bpeb
-0x00d4c8: C:\cod\obj\assets\assets\levels\mp_mayenne\nextgen\mp_mayenne.btrb
-0x00d50c: C:\cod\obj\assets\assets\levels\mp_mayenne\nextgen\mp_mayenne.zbbb
+0x0052b4: [local path]
+0x0052f4: [local path]
+0x005334: [local path]
+0x005374: [local path]
+0x0053c4: [local path]
+0x005414: [local path]
+0x005464: [local path]
+0x0054b4: [local path]
+0x005508: [local path]
+0x00555c: [local path]
+0x0055b0: [local path]
+0x0055f0: [local path]
+0x005630: [local path]
+0x005670: [local path]
+0x0056b0: [local path]
+0x0056f0: [local path]
+0x005730: [local path]
+0x005770: [local path]
+0x0057b0: [local path]
+0x005810: [local path]
+0x005870: [local path]
+0x0058d0: [local path]
+0x005930: [local path]
+0x00598c: [local path]
+0x0059e8: [local path]
+0x005a44: [local path]
+0x005aa4: [local path]
+0x005b04: [local path]
+0x005b64: [local path]
+0x005bc0: [local path]
+0x005c1c: [local path]
+0x005c7c: [local path]
+0x005cdc: [local path]
+0x005d3c: [local path]
+0x005d9c: [local path]
+0x005df8: [local path]
+0x005e54: [local path]
+0x005eb0: [local path]
+0x005f04: [local path]
+0x005f58: [local path]
+0x005fac: [local path]
+0x005ffc: [local path]
+0x00604c: [local path]
+0x0060a0: [local path]
+0x0060f4: [local path]
+0x006148: [local path]
+0x00619c: [local path]
+0x0061f0: [local path]
+0x006244: [local path]
+0x006298: [local path]
+0x0062e0: [local path]
+0x00632c: [local path]
+0x006378: [local path]
+0x0063c0: [local path]
+0x006408: [local path]
+0x006450: [local path]
+0x006498: [local path]
+0x0064e0: [local path]
+0x006530: [local path]
+0x006580: [local path]
+0x0065c8: [local path]
+0x006614: [local path]
+0x006664: [local path]
+0x0066b0: [local path]
+0x006700: [local path]
+0x00674c: [local path]
+0x00679c: [local path]
+0x0067e8: [local path]
+0x006848: [local path]
+0x0068a8: [local path]
+0x006908: [local path]
+0x006954: [local path]
+0x0069a4: [local path]
+0x0069e8: [local path]
+0x006a2c: [local path]
+0x006a78: [local path]
+0x006ac4: [local path]
+0x006b0c: [local path]
+0x006b50: [local path]
+0x006b94: [local path]
+0x006bd4: [local path]
+0x006c14: [local path]
+0x006c64: [local path]
+0x006ccc: [local path]
+0x006d30: [local path]
+0x006d74: [local path]
+0x006dc0: [local path]
+0x006e14: [local path]
+0x006e7c: [local path]
+0x006ee4: [local path]
+0x006f4c: [local path]
+0x006f90: [local path]
+0x006fdc: [local path]
+0x007020: [local path]
+0x007064: [local path]
+0x0070a8: [local path]
+0x0070fc: [local path]
+0x007150: [local path]
+0x0071a4: [local path]
+0x0071f8: [local path]
+0x00724c: [local path]
+0x0072a0: [local path]
+0x0072f0: [local path]
+0x007340: [local path]
+0x007390: [local path]
+0x0073fc: [local path]
+0x007468: [local path]
+0x0074d4: [local path]
+0x007538: [local path]
+0x00759c: [local path]
+0x007600: [local path]
+0x00766c: [local path]
+0x0076d8: [local path]
+0x007744: [local path]
+0x00778c: [local path]
+0x0077f4: [local path]
+0x00785c: [local path]
+0x0078c4: [local path]
+0x007904: [local path]
+0x007958: [local path]
+0x0079ac: [local path]
+0x007a00: [local path]
+0x007a58: [local path]
+0x007aac: [local path]
+0x007b00: [local path]
+0x007b58: [local path]
+0x007bb0: [local path]
+0x007bf8: [local path]
+0x007c44: [local path]
+0x007c88: [local path]
+0x007cd0: [local path]
+0x007d14: [local path]
+0x007d74: [local path]
+0x007dd4: [local path]
+0x007e34: [local path]
+0x007e78: [local path]
+0x007ebc: [local path]
+0x007f00: [local path]
+0x007f48: [local path]
+0x007f8c: [local path]
+0x007fd4: [local path]
+0x008018: [local path]
+0x008060: [local path]
+0x0080ac: [local path]
+0x0080f8: [local path]
+0x008140: [local path]
+0x008188: [local path]
+0x0081cc: [local path]
+0x008220: [local path]
+0x008274: [local path]
+0x0082c8: [local path]
+0x00831c: [local path]
+0x008370: [local path]
+0x0083c4: [local path]
+0x008420: [local path]
+0x00847c: [local path]
+0x0084d0: [local path]
+0x008530: [local path]
+0x008590: [local path]
+0x0085f0: [local path]
+0x008648: [local path]
+0x0086a0: [local path]
+0x0086f8: [local path]
+0x008750: [local path]
+0x0087a8: [local path]
+0x008800: [local path]
+0x008858: [local path]
+0x0088b0: [local path]
+0x008914: [local path]
+0x008d60: [local path]
+0x008dbc: [local path]
+0x008e18: [local path]
+0x008e74: [local path]
+0x008ed0: [local path]
+0x008f2c: [local path]
+0x008f88: [local path]
+0x008fe4: [local path]
+0x009040: [local path]
+0x00909c: [local path]
+0x0090f8: [local path]
+0x009154: [local path]
+0x0091b0: [local path]
+0x00920c: [local path]
+0x009268: [local path]
+0x0092c4: [local path]
+0x009320: [local path]
+0x00937c: [local path]
+0x0093d8: [local path]
+0x009434: [local path]
+0x009490: [local path]
+0x0094ec: [local path]
+0x009548: [local path]
+0x0095a4: [local path]
+0x009600: [local path]
+0x00965c: [local path]
+0x0096b8: [local path]
+0x009714: [local path]
+0x009770: [local path]
+0x0097cc: [local path]
+0x009828: [local path]
+0x009884: [local path]
+0x0098e0: [local path]
+0x00993c: [local path]
+0x009998: [local path]
+0x0099f4: [local path]
+0x009a50: [local path]
+0x009aac: [local path]
+0x009b08: [local path]
+0x009b64: [local path]
+0x009bb4: [local path]
+0x009c04: [local path]
+0x009c54: [local path]
+0x009ca4: [local path]
+0x009cf4: [local path]
+0x009d44: [local path]
+0x009d94: [local path]
+0x009de4: [local path]
+0x009e34: [local path]
+0x009e84: [local path]
+0x009ed4: [local path]
+0x009f24: [local path]
+0x009f74: [local path]
+0x009fc4: [local path]
+0x00a014: [local path]
+0x00a064: [local path]
+0x00a0b4: [local path]
+0x00a104: [local path]
+0x00a154: [local path]
+0x00a1a4: [local path]
+0x00a1f4: [local path]
+0x00a244: [local path]
+0x00a294: [local path]
+0x00a2e4: [local path]
+0x00a334: [local path]
+0x00a384: [local path]
+0x00a3d4: [local path]
+0x00a424: [local path]
+0x00a474: [local path]
+0x00a4c4: [local path]
+0x00a514: [local path]
+0x00a564: [local path]
+0x00a5b4: [local path]
+0x00a604: [local path]
+0x00a654: [local path]
+0x00a6a4: [local path]
+0x00a6f4: [local path]
+0x00a744: [local path]
+0x00a794: [local path]
+0x00a7f4: [local path]
+0x00a838: [local path]
+0x00a87c: [local path]
+0x00a8c0: [local path]
+0x00a904: [local path]
+0x00a944: [local path]
+0x00a99c: [local path]
+0x00a9e0: [local path]
+0x00aa2c: [local path]
+0x00aa78: [local path]
+0x00aac4: [local path]
+0x00ab1c: [local path]
+0x00ab6c: [local path]
+0x00abbc: [local path]
+0x00ac0c: [local path]
+0x00ac60: [local path]
+0x00acb8: [local path]
+0x00ad08: [local path]
+0x00ad58: [local path]
+0x00ada0: [local path]
+0x00ade8: [local path]
+0x00ae34: [local path]
+0x00ae84: [local path]
+0x00aed4: [local path]
+0x00af30: [local path]
+0x00af6c: [local path]
+0x00afb8: [local path]
+0x00b004: [local path]
+0x00b04c: [local path]
+0x00b094: [local path]
+0x00b0e0: [local path]
+0x00b12c: [local path]
+0x00b170: [local path]
+0x00b1bc: [local path]
+0x00b208: [local path]
+0x00b254: [local path]
+0x00b2a0: [local path]
+0x00b2ec: [local path]
+0x00b33c: [local path]
+0x00b384: [local path]
+0x00b3c8: [local path]
+0x00b410: [local path]
+0x00b458: [local path]
+0x00b4a4: [local path]
+0x00b4f0: [local path]
+0x00b53c: [local path]
+0x00b58c: [local path]
+0x00b5e0: [local path]
+0x00b628: [local path]
+0x00b670: [local path]
+0x00b6bc: [local path]
+0x00b714: [local path]
+0x00b768: [local path]
+0x00b7bc: [local path]
+0x00b810: [local path]
+0x00b85c: [local path]
+0x00b8a8: [local path]
+0x00b904: [local path]
+0x00b954: [local path]
+0x00b9a4: [local path]
+0x00b9f4: [local path]
+0x00ba3c: [local path]
+0x00ba8c: [local path]
+0x00bad8: [local path]
+0x00bb24: [local path]
+0x00bb70: [local path]
+0x00bbb8: [local path]
+0x00bc08: [local path]
+0x00bc4c: [local path]
+0x00bc9c: [local path]
+0x00bcec: [local path]
+0x00bd40: [local path]
+0x00bd94: [local path]
+0x00bde8: [local path]
+0x00be3c: [local path]
+0x00be94: [local path]
+0x00bedc: [local path]
+0x00bf28: [local path]
+0x00bf70: [local path]
+0x00bfb8: [local path]
+0x00c004: [local path]
+0x00c054: [local path]
+0x00c0a0: [local path]
+0x00c0f0: [local path]
+0x00c13c: [local path]
+0x00c198: [local path]
+0x00c1f4: [local path]
+0x00c240: [local path]
+0x00c290: [local path]
+0x00c2dc: [local path]
+0x00c328: [local path]
+0x00c374: [local path]
+0x00c3c8: [local path]
+0x00c414: [local path]
+0x00c464: [local path]
+0x00c4b0: [local path]
+0x00c4fc: [local path]
+0x00c548: [local path]
+0x00c598: [local path]
+0x00c5e4: [local path]
+0x00c630: [local path]
+0x00c67c: [local path]
+0x00c6cc: [local path]
+0x00c718: [local path]
+0x00c764: [local path]
+0x00c7b4: [local path]
+0x00c804: [local path]
+0x00c850: [local path]
+0x00c89c: [local path]
+0x00c8e8: [local path]
+0x00c934: [local path]
+0x00c984: [local path]
+0x00c9d0: [local path]
+0x00ca1c: [local path]
+0x00ca64: [local path]
+0x00caac: [local path]
+0x00caf4: [local path]
+0x00cb38: [local path]
+0x00cb80: [local path]
+0x00cbc8: [local path]
+0x00cc18: [local path]
+0x00cc64: [local path]
+0x00ccac: [local path]
+0x00ccf4: [local path]
+0x00cd3c: [local path]
+0x00cd80: [local path]
+0x00cdc8: [local path]
+0x00ce10: [local path]
+0x00ce54: [local path]
+0x00ce9c: [local path]
+0x00cee0: [local path]
+0x00cf2c: [local path]
+0x00cf7c: [local path]
+0x00cfc4: [local path]
+0x00d00c: [local path]
+0x00d058: [local path]
+0x00d0a4: [local path]
+0x00d0f0: [local path]
+0x00d13c: [local path]
+0x00d18c: [local path]
+0x00d1d8: [local path]
+0x00d21c: [local path]
+0x00d268: [local path]
+0x00d2b4: [local path]
+0x00d300: [local path]
+0x00d350: [local path]
+0x00d394: [local path]
+0x00d3e4: [local path]
+0x00d434: [local path]
+0x00d4c8: [local path]
+0x00d50c: [local path]
 0x00d550: c:\cod\obj\assets\image\mp_mayenne\mp_mayenne.ng.xmpbb
 0x00d588: c:\cod\obj\assets\image\mp_mayenne\mp_mayenne.ng.xmbb
 0x00d5c0: c:\cod\obj\assets\image\mp_mayenne\mp_mayenne.aitbb
@@ -824,10 +824,10 @@ Total: 871
 0x00d6a0: c:\cod\obj\assets\image\mp_mayenne\mp_mayenne.ncgb
 0x00d6d4: c:\cod\obj\assets\image\mp_mayenne\mp_mayenne.dtrb
 0x00d708: c:\cod\obj\assets\image\mp_mayenne\mp_mayenne.phyb
-0x00d73c: C:\cod\obj\assets\assets\levels\mp_mayenne\nextgen\mp_mayenne.scnb
+0x00d73c: [local path]
 0x00d780: c:\cod\obj\assets\image\mp_mayenne\mp_mayenne.gdbb
 0x00d7b4: c:\cod\obj\assets\image\mp_mayenne\mp_mayenne.dbb
-0x00d7e8: C:\cod\obj\assets\assets\dic\mp_mayenne.bindicb
+0x00d7e8: [local path]
 0x00d818: c:\cod\obj\assets\image\mp_mayenne\mp_mayenne.ng.atrbb
 0x00d938: c:\cod\obj\assets\image\mp_mayenne\mp_mayenne.us.xenon.mp.fli
 0x01055f: 1mp_mayenne.ncgb

@@ -20,17 +20,17 @@ Context (ascii): ass.ng.bpeb....bullet_smg_metal_spawn.ng.bpeb..bullet_smg_metal
 Pattern: spawn
 Offset: 0x00b52d
 Context (hex): 69636c65735c456e765c456c656374726963616c5c656c65635f62757273745f737061776e2e6e672e627065620000433a5c636f645c6f626a5c6173736574735c61737365
-Context (ascii): icles\Env\Electrical\elec_burst_spawn.ng.bpeb..C:\cod\obj\assets\asse
+Context (ascii): icles\Env\Electrical\elec_burst_spawn.ng.bpeb..[local path]
 
 Pattern: spawn
 Offset: 0x00c456
 Context (hex): 5c576561706f6e5c42756c6c65745c62756c6c65745f686d675f6d6574616c5f737061776e2e6e672e6270656200433a5c636f645c6f626a5c6173736574735c6173736574
-Context (ascii): \Weapon\Bullet\bullet_hmg_metal_spawn.ng.bpeb.C:\cod\obj\assets\asset
+Context (ascii): \Weapon\Bullet\bullet_hmg_metal_spawn.ng.bpeb.[local path]
 
 Pattern: spawn
 Offset: 0x00c6be
 Context (hex): 5c576561706f6e5c42756c6c65745c62756c6c65745f736d675f6d6574616c5f737061776e2e6e672e6270656200433a5c636f645c6f626a5c6173736574735c6173736574
-Context (ascii): \Weapon\Bullet\bullet_smg_metal_spawn.ng.bpeb.C:\cod\obj\assets\asset
+Context (ascii): \Weapon\Bullet\bullet_smg_metal_spawn.ng.bpeb.[local path]
 
 Pattern: spawn
 Offset: 0x617b29
