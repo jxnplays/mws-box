@@ -49,7 +49,12 @@ git fetch upstream
 git merge upstream/master
 ```
 
+
 ---
+
+## DLC workflow
+
+Each additional title is developed on its own branch (`dlc/nx1`, `dlc/bo2`, etc.) so work can land without risking the stable main branch. See [docs/DLC.md](docs/DLC.md).
 
 ## Progress
 
