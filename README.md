@@ -6,9 +6,25 @@
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)]()
 [![Base](https://img.shields.io/badge/base-IW4L%20upstream-orange)](https://github.com/vladtrc/iw4L)
 
-An IW4L-based sandbox client. Modern Warfare 2 is required. Additional Call of Duty titles are supported as optional DLC-style namespaces that read legitimate game installs you already own.
+One client. Twelve Call of Duty titles. Built on the latest upstream IW4L.
 
-This repository contains the full upstream IW4L codebase plus project documentation. It does not contain or redistribute any game assets.
+It does not ship or download game files. It reads the legitimate installs you already own and adds per-game support so maps, guns, attachments, and modes from those installs can load and play inside the same client.
+
+Modern Warfare 2 is required. Everything else is optional and treated as a DLC-style namespace so work on one title does not risk the base client.
+
+This repository contains the full upstream IW4L codebase plus project documentation and research notes. It does not contain or redistribute any game assets.
+
+---
+
+## What this fork adds
+
+- **One client for twelve titles.** MW2 is the base. Call of Duty 3, COD4, World at War, Black Ops, MW3, Black Ops 2, Advanced Warfare, Call of Duty Online, Black Ops 3, Infinite Warfare, and Future Warfare (NX1) are targeted as optional namespaces.
+- **DLC-style isolation.** Each additional title is developed on its own branch (`dlc/nx1`, `dlc/bo2`, etc.). Work lands without touching the stable main branch.
+- **Always build from source.** No prebuilt binaries are distributed. Clone and build. See [docs/BUILD-FROM-SOURCE.md](docs/BUILD-FROM-SOURCE.md).
+- **Research notes in-tree.** Format observations and asset inventories live in [`docs/findings/`](docs/findings/). Tool pointers and modding notes live in [`docs/resources/`](docs/resources/). Working notes live in [`docs/notes/`](docs/notes/).
+- **Related projects.** [NX1 Reborn](https://github.com/jxnplays/NX1-Reborn) (maintained static recomp of Future Warfare) and [COD3 Recomp](https://github.com/jxnplays/cod3-recomp) (maintained recomp of Call of Duty 3) feed into the same client.
+
+Also includes mashup content from the IW4L mashup fork (Skate 3 and Minecraft) where applicable.
 
 ---
 
