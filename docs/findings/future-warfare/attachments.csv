@@ -1,0 +1,22 @@
+internal_name,display_name,slot_type,source_file,evidence,confidence
+reflex,Reflex Sight,Optic,save/*.svg;2-nx1mp.map,"case ""reflex""; scar2_reflex_mp / asmk27_reflex_mp / xm108_reflex_mp / glo_reflex_mp",confirmed
+acog,ACOG Scope,Optic,save/*.svg,"case ""acog""; tag_reticle_acog",confirmed
+thermal,Thermal Scope,Optic,save/*.svg,"case ""thermal""; tag_reticle_thermal_scope; asset thermal_mp",confirmed
+silencer,Suppressor,Muzzle,save/*.svg,"case ""silencer""",confirmed
+grip,Grip,Underbarrel,save/*.svg,"case ""grip""; specialty_null_grip",confirmed
+gl,Underbarrel Grenade Launcher,Underbarrel,save/*.svg,"case ""gl""; specialty_null_gl",confirmed
+fmj,FMJ (Full Metal Jacket),Ammo,save/*.svg,"case ""fmj""; specialty_fmj; perk_bulletPenetrationMultiplier",confirmed
+akimbo,Akimbo,Fire-mode,save/*.svg,"case ""akimbo""; aa12_akimbo_mp; specialty_akimbo",confirmed
+astock,Adjustable Stock,Stock,save/*.svg,"case ""astock""",confirmed
+sbarrel,Short Barrel,Barrel,save/*.svg,"case ""sbarrel""",confirmed
+lbarrel,Long Barrel,Barrel,save/*.svg,"case ""lbarrel""",confirmed
+hrof,High Rate of Fire,Fire-mode,save/*.svg,"case ""hrof""",confirmed
+lrof,Low Rate of Fire,Fire-mode,save/*.svg,"case ""lrof""",confirmed
+jhp,Jacketed Hollow Point,Ammo,save/*.svg,"case ""jhp""",confirmed
+heartbeat,Heartbeat Sensor,Optic,save/*.svg,"case ""heartbeat""; weap_sniper_heartbeat",confirmed
+xmags,Extended Mags,Magazine,save/*.svg,"case ""xmags""; specialty_extendedmags",confirmed
+ccamo,Custom Camo,Cosmetic,save/*.svg,"case ""ccamo""; mp/camoTable.csv",confirmed
+tavor_scope,Tavor Scope,Optic,symbol_strings.txt,"tag_reticle_tavor_scope",likely
+laser_sight,Laser Sight,Optic,symbol_strings.txt,"EF_LASER_SIGHT",likely
+attachment_combos,Attachment combination rules,Rule,save/*.svg,"mp/attachmentCombos.csv (colIndex = tableLookupRowNum)",confirmed
+attachment_table,Attachment table,Rule,save/*.svg,"mp/attachmentTable.csv (attachmentName = tableLookup col 4)",confirmed

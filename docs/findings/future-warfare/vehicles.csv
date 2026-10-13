@@ -1,0 +1,12 @@
+internal_name,category,source_file,key_dvars,notes,confidence
+MiniUav,drone/UAV,2-nx1mp.map;console_mp.log,"MiniUav_speed;MiniUav_accel;miniuav_damage;g_vehMiniUAVMaxSpeed;g_vehMiniUAVMaxAccel;g_vehMiniUAVMaxRoll;g_vehMiniUAVMaxYawAccel;g_vehMiniUAVMaxYawRate;MiniUav_frictionMin;MiniUav_frictionMax;MiniUav_initHeight",player-controllable mini UAV drone; view params MiniUav_view*,confirmed
+UGV,ground vehicle,2-nx1mp.map,"selecting_ugv_location;CG_IsSelectingUGVLocation;CG_CompassDrawUGVDropLocations","Escort-mode UGV with Trophy System and checkpoints",confirmed
+AC130,gunship,console_mp.log,"scr_airdrop_ac130;ambienttrack_ac130","AC-130 killstreak; cPOF_AC130",confirmed
+Helicopter,air,2-nx1mp.map,"heli_barrelMaxVelocity;heli_barrelRotation;heli_barrelSlowdown;cgs.helicopterAnims","attack helicopter (helicopter/pavelow/choppergunner)",confirmed
+Sentry,turret,2-nx1mp.map,"sentry_placement_feet_offset;sentry_placement_trace_dist;sentry_placement_trace_pitch;sentry_placement_trace_radius;canplayerplacesentry","placeable sentry gun",confirmed
+Turret,static,2-nx1mp.map,"turret_adsEnabled;turret_adsFov;turret_adsTime;setturretweapon;setturretaccuracy;setturretmodechangewait","static/vehicle turret",confirmed
+TrophySystem,countermeasure,2-nx1mp.map,"g_allowTrophyToDestroyAllies;g_turretTrophyExitSpeedModulate;missileforcetrophyexplode;missiletrytrophyexplode","Trophy System destroys projectiles; mounted on UGV",confirmed
+LunarRover,ground vehicle,2-nx1mp.map;VOICEOVERS/NX_LUNAR,"lunar_rover","moon/lunar rover (SP lunar level)",likely
+VTOL,air,VEHICLES/,"scn_hhh_vtol_flyin*","VTOL aircraft",likely
+Tank,ground,2-nx1mp.map,"4 wheel tank (string)","tank vehicle",uncertain
+Exosuit,deployable,console_mp.log,"scr_airdrop_exosuit;scr_airdrop_mega_exosuit","exosuit killstreak",uncertain

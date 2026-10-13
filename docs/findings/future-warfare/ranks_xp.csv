@@ -1,0 +1,29 @@
+category,internal_name,value,source_file,evidence,confidence
+data_table,mp/rankTable.csv,file,2-nx1mp.map,"asset reference string",confirmed
+data_table,mp/rankIconTable.csv,file,2-nx1mp.map,"asset reference string",confirmed
+data_table,mp/unlocktable.csv,file,2-nx1mp.map,"asset reference string",confirmed
+data_table,mp/prestigedata.def,file,2-nx1mp.map,"asset reference string",confirmed
+data_table,mp/statstable.csv,file,2-nx1mp.map,"asset reference string",confirmed
+data_table,mp/challengeTable.csv,file,2-nx1mp.map,"asset reference string",confirmed
+data_table,mp/cardIconTable.csv,file,2-nx1mp.map,"asset reference string",confirmed
+data_table,mp/cardNameplateTable.csv,file,2-nx1mp.map,"asset reference string",confirmed
+data_table,mp/cardTitleTable.csv,file,2-nx1mp.map,"asset reference string",confirmed
+data_table,mp/MTDMTable.csv,file,2-nx1mp.map,"asset reference string (Multi-Team Deathmatch table)",confirmed
+data_table,mp/splashTable.csv,file,2-nx1mp.map,"asset reference string",confirmed
+data_table,mp/bbOverheadMapsTable.csv,file,2-nx1mp.map,"asset reference string",confirmed
+data_table,mp/mappack.info,file,2-nx1mp.map,"asset reference string",confirmed
+data_table,mp/playeranim.script,file,2-nx1mp.map,"asset reference string",confirmed
+data_table,mp/playeranimtypes.txt,file,2-nx1mp.map,"asset reference string",confirmed
+dvar,scr_xpscale,1,console_mp.log,"dvar set scr_xpscale 1",confirmed
+dvar,scr_restxp_enable,0,console_mp.log,"dvar set scr_restxp_enable 0",confirmed
+dvar,scr_restxp_minRestTime,4,console_mp.log,"dvar set scr_restxp_minRestTime 4",confirmed
+dvar,scr_restxp_levelsPerDay,0.5,console_mp.log,"dvar set scr_restxp_levelsPerDay 0.5",confirmed
+dvar,scr_restxp_cap,0.5,console_mp.log,"dvar set scr_restxp_cap 0.5",confirmed
+dvar,scr_restxp_restedAwardScale,0.5,console_mp.log,"dvar set scr_restxp_restedAwardScale 0.5",confirmed
+dvar,scr_restxp_timescale,1,console_mp.log,"dvar set scr_restxp_timescale 1",confirmed
+string,levelforexperience,unknown,symbol_strings.txt,"levelforexperience string",uncertain
+string,prestigeReset.max.prestige,unknown,symbol_strings.txt,"prestigeReset max prestige string",uncertain
+string,rank,unknown,symbol_strings.txt,"rank %d string",uncertain
+string,prestige,unknown,symbol_strings.txt,"prestige %d string",uncertain
+string,levelCount,unknown,symbol_strings.txt,"levelCount string",uncertain
+string,Empty rank string for rank,unknown,symbol_strings.txt,"error string referencing rank",uncertain

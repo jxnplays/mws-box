@@ -1,0 +1,59 @@
+=== KAPF Spawn-Point Records ===
+Source: mp/mpmaynne/mpmaynne.cod
+Total: 11
+
+Pattern: spawn
+Offset: 0x004547
+Context (hex): 6768745f62757273742e6e672e6270656200000000656c65635f62757273745f737061776e2e6e672e6270656200000000656c65635f74656c65706f6c655f73686f776572
+Context (ascii): ght_burst.ng.bpeb....elec_burst_spawn.ng.bpeb....elec_telepole_shower
+
+Pattern: spawn
+Offset: 0x004b0d
+Context (hex): 6173732e6e672e627065620000000062756c6c65745f686d675f6d6574616c5f737061776e2e6e672e62706562000062756c6c65745f686d675f6d6574616c2e6e672e6270
+Context (ascii): ass.ng.bpeb....bullet_hmg_metal_spawn.ng.bpeb..bullet_hmg_metal.ng.bp
+
+Pattern: spawn
+Offset: 0x004be9
+Context (hex): 6173732e6e672e627065620000000062756c6c65745f736d675f6d6574616c5f737061776e2e6e672e62706562000062756c6c65745f736d675f6d6574616c2e6e672e6270
+Context (ascii): ass.ng.bpeb....bullet_smg_metal_spawn.ng.bpeb..bullet_smg_metal.ng.bp
+
+Pattern: spawn
+Offset: 0x00b52d
+Context (hex): 69636c65735c456e765c456c656374726963616c5c656c65635f62757273745f737061776e2e6e672e627065620000433a5c636f645c6f626a5c6173736574735c61737365
+Context (ascii): icles\Env\Electrical\elec_burst_spawn.ng.bpeb..C:\cod\obj\assets\asse
+
+Pattern: spawn
+Offset: 0x00c456
+Context (hex): 5c576561706f6e5c42756c6c65745c62756c6c65745f686d675f6d6574616c5f737061776e2e6e672e6270656200433a5c636f645c6f626a5c6173736574735c6173736574
+Context (ascii): \Weapon\Bullet\bullet_hmg_metal_spawn.ng.bpeb.C:\cod\obj\assets\asset
+
+Pattern: spawn
+Offset: 0x00c6be
+Context (hex): 5c576561706f6e5c42756c6c65745c62756c6c65745f736d675f6d6574616c5f737061776e2e6e672e6270656200433a5c636f645c6f626a5c6173736574735c6173736574
+Context (ascii): \Weapon\Bullet\bullet_smg_metal_spawn.ng.bpeb.C:\cod\obj\assets\asset
+
+Pattern: spawn
+Offset: 0x617b29
+Context (hex): 745f686d675f6d6574616c0000000062756c6c65745f686d675f6d6574616c5f737061776e000062756c6c65745f686d675f776f6f640062756c6c65745f706973746f6c5f
+Context (ascii): t_hmg_metal....bullet_hmg_metal_spawn..bullet_hmg_wood.bullet_pistol_
+
+Pattern: spawn
+Offset: 0x617c19
+Context (hex): 745f736d675f6d6574616c0000000062756c6c65745f736d675f6d6574616c5f737061776e000062756c6c65745f736d675f776f6f640062756c6c65745f756d675f636f6e
+Context (ascii): t_smg_metal....bullet_smg_metal_spawn..bullet_smg_wood.bullet_umg_con
+
+Pattern: spawn
+Offset: 0x617d0b
+Context (hex): 776e000000647573745f736d6f6b655f6876000000656c65635f62757273745f737061776e00000000656c65635f6c696768745f627572737400000000656c65635f74656c
+Context (ascii): wn...dust_smoke_hv...elec_burst_spawn....elec_light_burst....elec_tel
+
+Pattern: spawn
+Offset: 0x1511911
+Context (hex): fa000043b68000000000003f8ccccd0000000000000011020003f4776f726c64737061776e0000008000c0008000c4008000c8008000d4008000d4008000e4008000e40080
+Context (ascii): ...C.......?...............worldspawn................................
+
+Pattern: info_player
+Offset: 0x1516520
+Context (hex): 0000000035302e00ffff6e330000400300000000000000000000000000000000696e666f5f706c617965725f737461727400000000000025020000e0000000000000000000000000028000
+Context (ascii): ....50....n3..@.................info_player_start......%...................
+

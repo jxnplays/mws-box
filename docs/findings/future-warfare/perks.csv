@@ -1,0 +1,125 @@
+internal_name,perk_dvar_implementation,category,source_file,notes,confidence
+specialty_ac130,,killstreak perk,save/*.svg,"grants AC130",confirmed
+specialty_agisuit,perk_agiSprintSpeedScale,suit,save/*.svg;console_mp.log,"AGI SUIT sprint speed",confirmed
+specialty_akimbo,,weapon,save/*.svg,"akimbo",confirmed
+specialty_armorpiercing,perk_armorPiercingDamage,weapon,save/*.svg;console_mp.log,"armor piercing damage 40",confirmed
+specialty_armorvest,,survivability,save/*.svg;console_mp.log,"armor vest (jug)",confirmed
+specialty_automantle,,movement,save/*.svg,"auto mantle",confirmed
+specialty_autospot,,recon,save/*.svg,"auto spot",confirmed
+specialty_Awarenessexpert,,specialist,save/*.svg,"awareness expert",confirmed
+specialty_blackbox,,support,save/*.svg,"black box",confirmed
+specialty_blastshield,perk_blastShield,survivability,save/*.svg;console_mp.log,"blast shield 65",confirmed
+specialty_blindeye,,stealth,save/*.svg,"blind eye",confirmed
+specialty_bling,,weapon,save/*.svg,"bling (2 attachments)",confirmed
+specialty_bulletaccuracy,perk_weapSpreadMultiplier,weapon,save/*.svg,"steady aim / spread",confirmed
+specialty_bulletdamage,perk_weapRateMultiplier,weapon,save/*.svg,"stopping power",confirmed
+specialty_bulletflinch,perk_damageKickReduction,survivability,save/*.svg,"reduced flinch",confirmed
+specialty_bulletpenetration,perk_bulletPenetrationMultiplier,weapon,save/*.svg,"FMJ / penetration",confirmed
+specialty_c4death,,death,save/*.svg,"c4 death",confirmed
+specialty_carepackage,,killstreak,save/*.svg,"care package",confirmed
+specialty_challenger,,specialist,save/*.svg,"challenger",confirmed
+specialty_coldblooded,perk_coldbloodedVisibleToXray,stealth,save/*.svg,"cold blooded",confirmed
+specialty_combathigh,,specialist,save/*.svg,"combat high",confirmed
+specialty_concussiongrenade,,equipment,save/*.svg,"concussion grenade",confirmed
+specialty_copycat,,specialist,save/*.svg,"copycat",confirmed
+specialty_dangerclose,,weapon,save/*.svg,"danger close",confirmed
+specialty_deadsilence,,stealth,save/*.svg,"dead silence",confirmed
+specialty_delaymine,,equipment,save/*.svg,"delay mine",confirmed
+specialty_detectexplosive,,recon,save/*.svg,"detect explosives",confirmed
+specialty_dishclip,,weapon,save/*.svg,"dish clip",confirmed
+specialty_disruptor,,recon,save/*.svg,"disruptor",confirmed
+specialty_endgame,,specialist,save/*.svg,"endgame",confirmed
+specialty_equipmenthack,,specialist,save/*.svg,"equipment hack",confirmed
+specialty_explosivebullets,,weapon,save/*.svg,"explosive bullets",confirmed
+specialty_explosivedamage,,weapon,save/*.svg,"explosive damage",confirmed
+specialty_extendedmelee,perk_extendedMeleeRange,weapon,save/*.svg,"extended melee range",confirmed
+specialty_extraammo,,weapon,save/*.svg,"extra ammo",confirmed
+specialty_extraspecialduration,,equipment,save/*.svg,"extra special duration",confirmed
+specialty_falldamage,,survivability,save/*.svg,"fall damage reduction",confirmed
+specialty_fastadsmove,perk_adsMoveScale;perk_adsMoveScaleSmallArms,movement,save/*.svg,"faster ADS move",confirmed
+specialty_fastcarepackagerecovery,,support,save/*.svg,"faster care package recovery",confirmed
+specialty_fasterlockon,,weapon,save/*.svg,"faster lock-on",confirmed
+specialty_fasthealthregen,,survivability,save/*.svg,"fast health regen",confirmed
+specialty_fastmantle,,movement,save/*.svg,"fast mantle",confirmed
+specialty_fastmeleerecovery,perk_weapMeleeMultiplier,weapon,save/*.svg,"fast melee recovery",confirmed
+specialty_fastoffhand,perk_fastOffhandMultiplier,equipment,save/*.svg,"fast offhand",confirmed
+specialty_fastreload,perk_weapReloadMultiplier,weapon,save/*.svg,"sleight of hand",confirmed
+specialty_fastsnipe,perk_fastSnipeScale,weapon,save/*.svg,"fast snipe",confirmed
+specialty_feigndeath,,death,save/*.svg,"feign death",confirmed
+specialty_finalstand,,death,save/*.svg,"final stand",confirmed
+specialty_flakjacket,,survivability,save/*.svg,"flak jacket",confirmed
+specialty_flashgrenade,,equipment,save/*.svg,"flash grenade",confirmed
+specialty_fmj,,weapon,save/*.svg,"FMJ",confirmed
+specialty_gasmask,,survivability,save/*.svg,"gas mask",confirmed
+specialty_gpsjammer,,recon,save/*.svg,"GPS jammer",confirmed
+specialty_grapplinghook,,movement,save/*.svg,"grappling hook",confirmed
+specialty_grenadepulldeath,perk_grenadeDeath,death,save/*.svg,"grenade pull death",confirmed
+specialty_hardline,,support,save/*.svg,"hardline",confirmed
+specialty_heartbreaker,,recon,save/*.svg,"heartbreaker",confirmed
+specialty_helicopter_minigun,,killstreak,save/*.svg,"helicopter minigun",confirmed
+specialty_holdbreath,perk_extraBreath,weapon,save/*.svg,"hold breath",confirmed
+specialty_jetsuit,,suit,save/*.svg,"JET SUIT",confirmed
+specialty_juggersuit,perk_juggerSprintSpeedScale,suit,save/*.svg;console_mp.log,"JUGGER SUIT",confirmed
+specialty_juiced,,support,save/*.svg,"juiced",confirmed
+specialty_laststand,,death,save/*.svg,"last stand",confirmed
+specialty_laststandoffhand,,death,save/*.svg,"last stand offhand",confirmed
+specialty_lightweight,perk_sprintMultiplier,movement,save/*.svg,"lightweight",confirmed
+specialty_littlebird_support,,killstreak,save/*.svg,"little bird support",confirmed
+specialty_loaded,,weapon,save/*.svg,"loaded",confirmed
+specialty_localjammer,,recon,save/*.svg,"local jammer",confirmed
+specialty_longersprint,perk_sprintDurationScale,movement,save/*.svg,"longer sprint",confirmed
+specialty_marathon,perk_sprintDurationScale,movement,save/*.svg,"marathon",confirmed
+specialty_marathonholder,,suit,save/*.svg,"marathon holder",confirmed
+specialty_marksman,,weapon,save/*.svg,"marksman",confirmed
+specialty_meleehack,,weapon,save/*.svg,"melee hack",confirmed
+specialty_Mobilityexpert,,specialist,save/*.svg,"mobility expert",confirmed
+specialty_moonsuit,,suit,save/*.svg;console_mp.log,"MOON SUIT (low-gravity)",confirmed
+specialty_netpainkiller,,survivability,save/*.svg,"network painkiller",confirmed
+specialty_ninjaholder,,suit,save/*.svg,"ninja holder",confirmed
+specialty_null,,empty,save/*.svg,"null perk slot",confirmed
+specialty_omaquickchange,,specialist,save/*.svg,"one-man-army quick change",confirmed
+specialty_onemanarmy,,specialist,save/*.svg,"one man army",confirmed
+specialty_painkiller,,survivability,save/*.svg,"painkiller",confirmed
+specialty_paint,,recon,save/*.svg,"paint (target marking)",confirmed
+specialty_paint_pro,,recon,save/*.svg,"paint pro",confirmed
+specialty_pistoldeath,,death,save/*.svg,"pistol death",confirmed
+specialty_portable_radar,,recon,save/*.svg,"portable radar",confirmed
+specialty_precision_airstrike,,killstreak,save/*.svg,"precision airstrike",confirmed
+specialty_predator_missile,,killstreak,save/*.svg,"predator missile",confirmed
+specialty_primarydeath,,death,save/*.svg,"primary death",confirmed
+specialty_quickdraw,perk_quickDrawSpeedScale,weapon,save/*.svg,"quickdraw",confirmed
+specialty_quickdrawholder,,suit,save/*.svg,"quickdraw holder",confirmed
+specialty_quieter,,stealth,save/*.svg,"quieter",confirmed
+specialty_rearview,,recon,save/*.svg,"rear view",confirmed
+specialty_rechargetest,,test,save/*.svg,"recharge test (debug)",uncertain
+specialty_revenge,,death,save/*.svg,"revenge",confirmed
+specialty_rollover,,specialist,save/*.svg,"rollover",confirmed
+specialty_saboteur,,equipment,save/*.svg,"saboteur",confirmed
+specialty_scavenger,perk_scavengerMode,support,save/*.svg;console_mp.log,"scavenger",confirmed
+specialty_scrambler,,recon,save/*.svg,"scrambler",confirmed
+specialty_secondarybling,,weapon,save/*.svg,"secondary bling",confirmed
+specialty_selectivehearing,perk_footstepVolume*,recon,save/*.svg,"selective hearing",confirmed
+specialty_sentry_minigun,,killstreak,save/*.svg,"sentry minigun",confirmed
+specialty_shellshock,perk_shellShockReduction,survivability,save/*.svg,"shellshock reduction",confirmed
+specialty_shield,,survivability,save/*.svg,"shield",confirmed
+specialty_siege,,specialist,save/*.svg,"siege",confirmed
+specialty_sleightofhand,perk_weapReloadMultiplier,weapon,save/*.svg,"sleight of hand",confirmed
+specialty_smokegrenade,,equipment,save/*.svg,"smoke grenade",confirmed
+specialty_spectre,,suit,save/*.svg,"SPECTRE suit",confirmed
+specialty_spectrepro,,suit,save/*.svg,"SPECTRE pro suit",confirmed
+specialty_sprintreload,,movement,save/*.svg,"sprint reload",confirmed
+specialty_spygame,,recon,save/*.svg,"spy game",confirmed
+specialty_stealthsuit,,suit,save/*.svg,"STEALTH SUIT (cloaking)",confirmed
+specialty_Steathexpert,,specialist,save/*.svg,"stealth expert",confirmed
+specialty_steelnerves,,weapon,save/*.svg,"steel nerves",confirmed
+specialty_stoppingpower,perk_weapRateMultiplier,weapon,save/*.svg,"stopping power",confirmed
+specialty_tacsuit,,suit,save/*.svg,"TAC SUIT",confirmed
+specialty_tacticalinsertion,,equipment,save/*.svg,"tactical insertion",confirmed
+specialty_tank,,suit,save/*.svg,"tank",confirmed
+specialty_thermal,,weapon,save/*.svg,"thermal",confirmed
+specialty_twoprimaries,,weapon,save/*.svg,"overkill / two primaries",confirmed
+specialty_twoprimariesholder,,suit,save/*.svg,"two primaries holder",confirmed
+specialty_twoprimarieslethal,,weapon,save/*.svg,"two primaries + lethal",confirmed
+specialty_twoprimariesoffhand,,weapon,save/*.svg,"two primaries + offhand",confirmed
+specialty_uav,,killstreak,save/*.svg,"UAV",confirmed
+specialty_xrayvision,,recon,save/*.svg,"x-ray vision (gp_rdvar_xray_*)",confirmed

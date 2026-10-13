@@ -1,0 +1,25 @@
+internal_name,display_name_guess,score_limit,time_limit,round_limit,win_limit,num_lives,respawn_delay,spawn_class,source_file,notes,confidence
+war,Team Deathmatch (inferred),5000,10,1,1,0,0,mp_tdm_spawn,console_mp.log;save/*.svg,"scr_war_* dvars; case ""war"" in gametype switch",likely
+dm,Free-for-All / Deathmatch,1000,10,1,1,0,0,mp_dm_spawn,console_mp.log;save/*.svg,"scr_dm_*; case ""dm""",confirmed
+dom,Domination,100,0,1,1,0,0,mp_dom_spawn,console_mp.log;save/*.svg,"scr_dom_*; case ""dom""",confirmed
+ctf,Capture the Flag,0,10,1,1,0,0,mp_ctf_spawn,console_mp.log;save/*.svg,"scr_ctf_*; case ""ctf""; returntime 30",confirmed
+sd,Search & Destroy,1,2.5,0,4,1,0,mp_sd_spawn,console_mp.log;save/*.svg,"scr_sd_*; case ""sd""; bombtimer 45",confirmed
+sab,Sabotage,0,20,1,1,0,7.5,mp_sab_spawn,console_mp.log;save/*.svg,"scr_sab_*; case ""sab""; briefcase_bomb_mp",confirmed
+dd,Demolition,1,2.5,3,2,0,0,mp_dd_spawn,console_mp.log,"scr_dd_*; attacker/defender spawns",confirmed
+escort,Escort (UGV),0,4,2,2,0,3,mp_escort_spawn,console_mp.log;save/*.svg,"scr_escort_*; escortcheckpoint case; UGV + Trophy System",confirmed
+escortplus,Escort Plus,0,4,2,2,0,3,mp_escort_spawn,console_mp.log;save/*.svg,"scr_escortplus_*; 'this is a escort plus check'",confirmed
+mtdm,Multi-Team Deathmatch,7500,10,1,1,0,0,mp_mtdm_spawn_team_N,console_mp.log;save/*.svg,"scr_mtdm_*; mp/MTDMTable.csv; g_MTDM_NumTeams=4",confirmed
+hvt,High Value Target,4000,10,1,1,0,0,unknown,console_mp.log,"scr_hvt_*; active in log",likely
+koth,King of the Hill,250,15,1,1,0,0,unknown,console_mp.log;save/*.svg,"scr_koth_*; case ""koth""",confirmed
+hardpoint,Hardpoint,,,1,1,0,0,unknown,save/*.svg;console_mp.log,"case ""hardpoint""; scr_game_hardpoints",confirmed
+wargasm,Wargasm (test),,,,0,0,unknown,save/*.svg,"case ""wargasm"" - likely a joke/test gametype",uncertain
+hc,Hardcore,,,1,1,0,0,unknown,save/*.svg;console_mp.log,"case ""hc""; scr_hardcore/g_hardcore",confirmed
+arena,Arena,1,2.5,0,4,1,0,unknown,console_mp.log,"scr_arena_*",uncertain
+convoy,Convoy,0,0,2,2,0,3,unknown,console_mp.log,"scr_convoy_*; '0-Convoy Test' build",likely
+cwtest,CW Test (Clan Wars test),12,15,1,1,0,5.0,unknown,console_mp.log,"scr_cwtest_*; num_intel 2",uncertain
+gg,Gun Game,2500,0,1,1,0,0,unknown,console_mp.log,"scr_gg_*",uncertain
+glad,Gladiator,1000,1.5,0,1,1,0,unknown,console_mp.log,"scr_glad_*",uncertain
+gtnw,GTNW,101,10,1,1,0,0,unknown,console_mp.log,"scr_gtnw_*",uncertain
+merc,Mercenary,100000,2,1,1,0,0,unknown,console_mp.log,"scr_merc_*",uncertain
+oneflag,One Flag CTF,1,3,0,4,0,0,unknown,console_mp.log,"scr_oneflag_*",uncertain
+vip,VIP,1,2.5,3,2,0,0,unknown,console_mp.log,"scr_vip_*",uncertain

@@ -1,0 +1,20 @@
+{
+  "header": {
+    "magic": "KAPF",
+    "version_flags": 1073993482,
+    "section_table_offset": 48,
+    "version": 3,
+    "asset_count": 568,
+    "asset_table_size": 21116,
+    "data_offset": 55672,
+    "section_name": "CODLOCS"
+  },
+  "sections": {
+    "CODLOCS": 28,
+    "AUDIO": 72,
+    "FLI": 96
+  },
+  "asset_count": 871,
+  "collision_sections": 1,
+  "spawn_entries": 11
+}
