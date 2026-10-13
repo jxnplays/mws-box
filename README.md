@@ -63,6 +63,12 @@ Each additional title is developed on its own branch (`dlc/nx1`, `dlc/bo2`, etc.
 
 Per-title status lives in [`docs/progress/`](docs/progress/README.md).
 
+### Research notes
+
+- [`docs/findings/`](docs/findings/) — format notes and asset inventories (NX1, COD3, MW3)
+- [`docs/resources/`](docs/resources/) — tool pointers and modding notes
+- [`docs/notes/`](docs/notes/) — working notes on features and IW4L behavior
+
 ---
 
 ## Related projects
