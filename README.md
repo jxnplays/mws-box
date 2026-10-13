@@ -1,94 +1,93 @@
-# IW4L
+![MWS&BOX](res/logo.png)
 
-IW4L is an open-source runtime for Call of Duty: Modern Warfare 2 (2009), written in
-Rust with [Bevy](https://bevy.org/). Point it at a copy of MW2 you already own and it
-loads that installation's maps, models, textures and weapons into its own engine. You
-can try implemented movement and combat on multiplayer maps, then inspect or change how
-those systems work.
+# MWS&BOX
 
-<p align="center">
-  <img src="docs/screenshots/bomb-plant.jpg" width="49%" alt="Bomb planting in IW4L">
-  <img src="docs/screenshots/tanker-explosion.jpg" width="49%" alt="Tanker explosion in IW4L">
-</p>
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)]()
+[![Base](https://img.shields.io/badge/base-IW4L%20upstream-orange)](https://github.com/vladtrc/iw4L)
 
-## What you can try
+An IW4L-based sandbox client. Modern Warfare 2 is required. Additional Call of Duty titles are supported as optional DLC-style namespaces that read legitimate game installs you already own.
 
-Explore maps, fight bots, and record and replay demos. Gameplay remains incomplete;
-expect missing behavior, bugs and desyncs. The asset readers also cover MW3 and Black
-Ops.
+This repository contains the full upstream IW4L codebase plus project documentation. It does not contain or redistribute any game assets.
 
-APIs, configuration, caches and the wire protocol change between commits;
-multiplayer peers must run the same build.
+---
 
-## Windows: prebuilt release
+## Approach
 
-1. Download `iw4l-windows.zip` from [Releases](../../releases) and extract it into an
-   empty writable folder. The archive password is `t.me/contextrot`.
-2. Launch `iw4l.exe`. It finds MW2 in your Steam libraries and creates a
-   `Modern Warfare 2.lnk` shortcut next to itself. For an install outside Steam, create
-   that shortcut to your MW2 folder yourself.
+Additional titles are treated as namespaces / DLC categories (the same way other titles sit behind their own family IDs in upstream). They do not fork the core render path. Each title contributes its own maps, weapons, attachments, and modes only when a reader and integration path exists.
 
-For online play, put the `.iw4l-server` file you received from a server operator next
-to `iw4l.exe`. With it the game finds that master and updates itself on launch. Details:
-[Windows guide](docs/WINDOWS.md).
+**Required base:** Modern Warfare 2 (2009)
 
-## Build and run
+**Target titles (optional):**
+- Call of Duty 3
+- Call of Duty 4: Modern Warfare
+- World at War
+- Black Ops
+- Modern Warfare 3
+- Black Ops 2
+- Advanced Warfare
+- Call of Duty Online
+- Black Ops 3
+- Infinite Warfare
+- Future Warfare (NX1)
 
-Install Rust through rustup and GNU Make. [Build dependencies](docs/BUILD.md) cover
-Linux's C/C++ toolchain and system libraries, and macOS's Xcode command line tools.
-[Windows instructions](docs/WINDOWS.md) cover building and arranging a portable folder.
+Also includes mashup content from the IW4L mashup fork (Skate 3 and Minecraft) where applicable.
 
-You need your own installed MW2 Multiplayer data. IW4L
-distributes no game assets and reads installations without patching or replacing their
-files. Caches, demos and logs go under `iw4l-artifacts/`; Linux settings use a separate
-configuration directory described in the [run guide](docs/RUN.md).
+---
 
-From the repository root:
+## Building
+
+This repo tracks the latest upstream [IW4L](https://github.com/vladtrc/iw4L). Follow the upstream build instructions in the original README sections below or in `docs/`.
+
+You must supply your own legitimate game installs. Nothing in this repository replaces or includes game files.
+
+To stay current with upstream:
 
 ```bash
-cp .env.example .env
-# Edit .env: set IW4L_GAMES to the folder containing your game installations.
-make map mp_boneyard CMDS='wait world; spawn 0; force_match_start; bot add 3'
+git remote add upstream https://github.com/vladtrc/iw4L.git
+git fetch upstream
+git merge upstream/master
 ```
 
-This builds the optimized `play` profile and starts a local match with three bots.
-`force_match_start` skips the warmup that otherwise freezes movement.
+---
 
-## Inside the engine
+## Progress
 
-| Area | Implementation |
-|---|---|
-| Assets | Native FastFile readers convert game data into a shared intermediate representation. |
-| Shaders | Retail Direct3D 9 Shader Model 3 bytecode is translated to WGSL. |
-| Rendering | World geometry, models and effects feed one sorted draw-surface list. |
-| Simulation | Server authority, client prediction and replay share one simulation step over explicit Bevy ECS state. |
-| Networking | Custom UDP traffic; a QUIC master provides browsing and relaying. The host simulates the match. |
+Per-title status lives in [`docs/progress/`](docs/progress/README.md).
 
-## Where to go next
+---
 
-- [Run guide](docs/RUN.md): console commands, classes and demo playback; [master setup](docs/MASTER.md) for playtests.
-- [Rendering](docs/RENDER.md) and [simulation](docs/SIM-STEP.md): inspect the engine's implementation.
-- [Map loading](docs/MAP-LOAD.md), [GSC runtime](docs/GSC-RUNTIME.md) and [bot AI](docs/BOTS.md): starting points for experiments and modifications.
-- [Documentation index](docs/INDEX.md), [contributing](CONTRIBUTING.md) and [security reports](SECURITY.md).
+## Related projects
 
-This whole project is written by an LLM.
+- [NX1 Reborn](https://github.com/jxnplays/NX1-Reborn) — maintained static recomp of Future Warfare
+- COD3 Reborn — maintained recomp of Call of Duty 3 (in progress)
+- CODOL Reborn — offline English version of Call of Duty Online (by Pteryla)
 
-## Acknowledgements and license
+---
 
-Thank you to all contributors for code, bug reports, testing and feedback.
-Special thanks to **ju1cedr1nker** and **silvernote03** for QA testing weapons,
-maps, attachments and other gameplay features.
+## Legal
 
-[OpenAssetTools](https://github.com/Laupetin/OpenAssetTools) and its [iw4x-x64
-fork](https://github.com/iw4x-x64/oat) informed asset layouts;
-[IW4x](https://github.com/iw4x/iw4x-client) informed asset and protocol behavior;
-[KisakCOD](https://github.com/SwagSoftware/KisakCOD) informed engine structure.
-[Ghidra](https://github.com/NationalSecurityAgency/ghidra) was used to inspect the
-original binaries.
+This project is not affiliated with, endorsed by, or sponsored by Activision, Infinity Ward, Treyarch, Sledgehammer Games, Neversoft, or any other rights holder. All trademarks and copyrights remain the property of their respective owners.
 
-Movement implementation history and source boundaries are recorded in
-[its provenance note](docs/provenance/movement-iw4.md).
+You must legally obtain the games you wish to load. This repository contains only the client code, readers, and documentation. No game assets are included.
 
-IW4L's source is licensed under [Apache 2.0](LICENSE). Preserve required attribution and
-bundled font license texts when redistributing; see [NOTICE](NOTICE). Original game
-assets and trademarks belong to their owners. IW4L is unaffiliated with them.
+---
+
+## License
+
+Project documentation and local additions are MIT. See [LICENSE](LICENSE).
+
+Upstream IW4L is Apache-2.0. See [NOTICE](NOTICE) and [THIRD-PARTY-LICENSES.txt](THIRD-PARTY-LICENSES.txt). Vendored components retain their original licenses.
+
+---
+
+*The remainder of this file is the original upstream IW4L README for build and usage details.*
+
+---
+
+# IW4L (upstream)
+
+Standalone experimental Call of Duty runtime in Rust, built on Bevy and wgpu.
+
+See the upstream repository for the latest build instructions, requirements, and controls: https://github.com/vladtrc/iw4L
+
