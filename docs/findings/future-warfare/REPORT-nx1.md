@@ -1,6 +1,6 @@
 # REPORT — NX1 "Call of Duty: Future Warfare" Multiplayer Extraction
 
-**Target:** `E:\Call of Duty Future Warfare\NX1` — cancelled Neversoft Xbox 360 prototype (IW4/MW2 engine)
+**Target:** `[local path] of Duty Future Warfare\NX1` — cancelled Neversoft Xbox 360 prototype (IW4/MW2 engine)
 **Build string:** `Build 546 12/18/2011 21:02:16 CODEBOT3 SHOOT FOR THE STARS`
 **Analysis date:** 2026-10-06
 **Method:** Read-only. All outputs in `output/`.
@@ -430,4 +430,4 @@ Perks use the `specialty_*` internal naming convention. Full list extracted from
 
 ---
 
-*Report generated 2026-10-06. All data sourced exclusively from files in `E:\Call of Duty Future Warfare\NX1\`.*
+*Report generated 2026-10-06. All data sourced exclusively from files in `[local path] of Duty Future Warfare\NX1\`.*

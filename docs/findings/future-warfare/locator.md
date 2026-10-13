@@ -9,7 +9,7 @@ Takes one fastfile path. Finds the first ASCII `NXffs100`. Prints the offset and
 bytes immediately following the 12-byte key.
 
 ```
-.\nx1-locate.ps1 -Path "E:\Call of Duty Future Warfare\NX1\mp_nx_galleria.ffm"
+.\nx1-locate.ps1 -Path "[local path] of Duty Future Warfare\NX1\mp_nx_galleria.ffm"
 mp_nx_galleria.ffm | offset 98198 (0x17F96) | next4 0F 04 54 4C
 ```
 
@@ -584,11 +584,11 @@ point of it — it records bytes it cannot read rather than guessing at them.
 
 ## No LZX decoder on machine
 
-`nx1-lzx-decode.ps1` searched **`C:\Windows` and `C:\Program Files` by filename** for
+`nx1-lzx-decode.ps1` searched **`[local path]` and `[local path] Files` by filename** for
 `lzx` and `xcompress`, across `.dll`, `.exe`, `.sys` and `.ocx`.
 
 ```
-searching C:\Windows, C:\Program Files for names containing: lzx, xcompress
+searching [local path] [local path] Files for names containing: lzx, xcompress
 no decoder on machine
 ```
 

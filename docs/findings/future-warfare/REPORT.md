@@ -1,6 +1,6 @@
 # REPORT - NX1 "Call of Duty: Future Warfare" multiplayer content extraction
 
-Target: `E:\Call of Duty Future Warfare\NX1` (cancelled Neversoft Xbox 360 prototype, IW4/MW2 engine,
+Target: `[local path] of Duty Future Warfare\NX1` (cancelled Neversoft Xbox 360 prototype, IW4/MW2 engine,
 dev/debug build `Build 546 12/18/2011 21:02:16 CODEBOT3 SHOOT FOR THE STARS`).
 All work was read-only against the source; every output is in `output/`.
 

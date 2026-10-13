@@ -108,7 +108,7 @@ Geometry loads. `crates/assets/src/session_load/match_walk.rs` already inserts b
 
 Textures resolve. The scar2 color and specular IWIs are packaged in `nx1_scar2_images.iwd` (1,049,150 bytes) and placed in `main\\`. The resolution chain is closed. Malformed-archive risk remains.
 
-Sounds are not wired. Nine WAVs exist under `E:\\Call of Duty Future Warfare\\NX1\\output\\one-gun\\tools\\saluki\\exported_files\\nx1\\sounds\\weapons\\scar2\\`. The client has `IwdSoundIndex`. No sound IWD packaged. No aliases assigned. In-game gun uses M4 sounds.
+Sounds are not wired. Nine WAVs exist under `[local path] of Duty Future Warfare\\NX1\\output\\one-gun\\tools\\saluki\\exported_files\\nx1\\sounds\\weapons\\scar2\\`. The client has `IwdSoundIndex`. No sound IWD packaged. No aliases assigned. In-game gun uses M4 sounds.
 
 Animations are not loaded. The client supports XAnims for MW3 and BO1. No NX1 raise/reload/fire clips have been located or bound to scar2.
 

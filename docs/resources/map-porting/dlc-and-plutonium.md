@@ -20,7 +20,7 @@
 
 ## Path split
 
-- Clean MW2: `F:\SteamLibrary\steamapps\common\Call of Duty Modern Warfare 2`
-- G: usermaps: `G:\SteamLibrary\steamapps\common\Call of Duty Modern Warfare 2\usermaps`
+- Clean MW2: `[local path] of Duty Modern Warfare 2`
+- G: usermaps: `[local path] of Duty Modern Warfare 2\usermaps`
 - Plutonium iw5: `[local path]
 - Do not merge folders on disk.

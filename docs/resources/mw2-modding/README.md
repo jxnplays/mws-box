@@ -8,8 +8,8 @@
 
 ## Install locations
 
-- Clean MW2: `F:\SteamLibrary\steamapps\common\Call of Duty Modern Warfare 2`
-- Usermaps: `G:\SteamLibrary\steamapps\common\Call of Duty Modern Warfare 2\usermaps` (97 maps)
+- Clean MW2: `[local path] of Duty Modern Warfare 2`
+- Usermaps: `[local path] of Duty Modern Warfare 2\usermaps` (97 maps)
 
 ## Zone structure
 

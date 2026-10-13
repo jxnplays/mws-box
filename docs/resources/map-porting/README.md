@@ -8,8 +8,8 @@
 
 ## Install locations
 
-- MW2 clean: `F:\SteamLibrary\steamapps\common\Call of Duty Modern Warfare 2`
-- MW2 usermaps: `G:\SteamLibrary\steamapps\common\Call of Duty Modern Warfare 2\usermaps` (97 maps)
+- MW2 clean: `[local path] of Duty Modern Warfare 2`
+- MW2 usermaps: `[local path] of Duty Modern Warfare 2\usermaps` (97 maps)
 - MW3: `[local path] of Duty Modern Warfare 3`
 - BO1: `[local path] of Duty Black Ops`
 
