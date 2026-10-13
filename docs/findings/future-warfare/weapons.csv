@@ -1,0 +1,65 @@
+internal_name,display_name,class,inferred,source_file,evidence,confidence
+scar,SCAR,,,save/*.svg memory dump;2-nx1mp.map,"case ""scar""; weapon asset scar_mp; attachment variant scar2_reflex_mp",confirmed
+scar2,SCAR Mod 2,,yes,save/*.svg;2-nx1mp.map,"case ""scar2""; scar2_reflex_mp",confirmed
+asmk27,Atlas Mk.27,,yes,save/*.svg;2-nx1mp.map,"case ""asmk27""; asmk27_reflex_mp",confirmed
+xm108,XM108 SEAR,,yes,save/*.svg;2-nx1mp.map,"case ""xm108""; xm108_reflex_mp",confirmed
+ecr,ECR Phoenix,,yes,save/*.svg,"case ""ecr""",confirmed
+fal,FAL,,,save/*.svg,"case ""fal""",confirmed
+type104,Type 104,,yes,save/*.svg,"case ""type104""",confirmed
+augks,Aug KS,,,save/*.svg,"case ""augks""; asset augks_mp",confirmed
+ffar,FFAR,,,save/*.svg,"case ""ffar""",confirmed
+abg,ABG-4L (grenade launcher),,,save/*.svg,"case ""abg""; asset variant",confirmed
+ajax,AJAX,,,save/*.svg,"case ""ajax""",confirmed
+pulserifle,Pulse Rifle,,yes,save/*.svg,"case ""pulserifle""",confirmed
+laserrifle,Laser Rifle,,yes,save/*.svg,"case ""laserrifle""",confirmed
+lasersniper,Laser Sniper,,yes,save/*.svg,"case ""lasersniper""",confirmed
+glo,G-LO 7.62mm,,yes,save/*.svg;2-nx1mp.map,"case ""glo""; glo_reflex_mp",confirmed
+needler,Needler,,yes,save/*.svg,"case ""needler""",confirmed
+sonic_warden,Sonic Warden,,yes,save/*.svg,"case ""sonic_warden""; asset sonic_warden_mp",confirmed
+xm25,XM25,,,save/*.svg,"case ""xm25""",confirmed
+xm25ks,XM25 KS,,,save/*.svg,"case ""xm25ks""; asset xm25ks_mp",confirmed
+m79,M79,,,save/*.svg,"case ""m79""; asset m79_mp",confirmed
+m320,M320,,,save/*.svg,"case ""m320""",confirmed
+srm1216,SRM-1216,,yes,save/*.svg,"case ""srm1216""",confirmed
+ksg,KSG,,,save/*.svg,"case ""ksg""",confirmed
+cheytac,CheyTac,,,save/*.svg,"case ""cheytac""",confirmed
+coltanaconda,Colt Anaconda,,yes,save/*.svg,"case ""coltanaconda""",confirmed
+beretta393,Beretta 393,,yes,save/*.svg,"case ""beretta393""",confirmed
+aa12,AA-12 (legacy),,,save/*.svg,"case ""aa12""; asset aa12_akimbo_mp",likely
+mp5,MP5 (legacy),,,save/*.svg,"case ""mp5""; asset mp5_mp",likely
+ump45,UMP45 (legacy),,,save/*.svg,"case ""ump45""",likely
+p90,P90 (legacy),,,save/*.svg,"case ""p90""",likely
+rpd,RPD (legacy),,,save/*.svg,"case ""rpd""",likely
+m240,M240 (legacy),,,save/*.svg,"case ""m240""",likely
+m21,M21 (legacy),,,save/*.svg,"case ""m21""",likely
+m1014,M1014 (legacy),,,save/*.svg,"case ""m1014""",likely
+spas12,SPAS-12 (legacy),,,save/*.svg,"case ""spas12""",likely
+barrett,Barrett (legacy),,,save/*.svg,"case ""barrett""",likely
+glock,Glock (legacy),,,save/*.svg,"case ""glock""",likely
+beretta,Beretta (legacy),,,save/*.svg,"case ""beretta""",likely
+at4,AT4 (legacy),,,save/*.svg,"case ""at4_mp""",likely
+rpg,RPG (legacy),,,save/*.svg,"case ""rpg""; asset rpg_mp",likely
+javelin,Javelin (legacy),,,save/*.svg,"case ""javelin""; asset javelin_mp",likely
+stinger,Stinger (legacy),,,save/*.svg,"case ""stinger""; asset stinger_mp",likely
+socom_141,SOCOM 141 (faction weapon),,,save/*.svg,"case ""socom_141""; socom_141_arctic/desert/forest",likely
+semtex,Semtex,,,save/*.svg,"case ""semtex_mp""",confirmed
+throwingknife,Throwing Knife,,,save/*.svg,"asset throwingknife_mp; WEAPON_THROWINGKNIFE",confirmed
+claymore,Claymore,,,save/*.svg,"asset claymore_mp; case ""claymore_mp""",confirmed
+c4,C4,,,save/*.svg,"asset c4_mp; case ""c4_mp""",confirmed
+frag_grenade,Frag Grenade,,,save/*.svg,"asset frag_grenade_mp; scr_weapon_allowfrags",confirmed
+flash_grenade,Flash Grenade,,,save/*.svg,"asset flash_grenade_mp / flashbang_mp; scr_weapon_allowflash",confirmed
+smoke_grenade,Smoke Grenade,,,save/*.svg,"asset smoke_grenade_mp; scr_weapon_allowsmoke",confirmed
+gas_grenade,Gas Grenade,,,save/*.svg,"asset gas_grenade_mp; WEAPON_GASGRENADE",confirmed
+emp_grenade,EMP Grenade,,,save/*.svg,"asset emp_grenade_mp / empcloud_grenade_mp; WEAPON_EMPGRENADE",confirmed
+lidar_grenade,Lidar Grenade,,,save/*.svg,"asset lidar_grenade_mp / lidarmine_mp; WEAPON_LIDARGRENADE",confirmed
+concussion_grenade,Concussion Grenade,,,save/*.svg,"asset concussion_grenade_mp",confirmed
+grapplinghook,Grappling Hook,,,save/*.svg,"asset grapplinghook_mp",confirmed
+portable_radar,Portable Radar,,,save/*.svg,"asset portable_radar_mp; weapon_portable_radar",confirmed
+scavenger_bag,Scavenger Bag,,,save/*.svg,"asset scavenger_bag_mp",confirmed
+riotshield,Riot Shield,,,save/*.svg,"asset riotshield_mp / weapon_riot_shield_mp / viewmodel_riot_shield_mp",confirmed
+riotshieldcloak,Riot Shield (Cloak),,,save/*.svg,"asset riotshieldcloak_mp (Cloaking Shield)",confirmed
+riotshieldcover,Riot Shield (Cover/Deployable),,,save/*.svg,"asset riotshieldcover_mp / riotshieldcover_destroyed_mp (Deployable Shield)",confirmed
+riotshieldxray,Riot Shield (X-Ray),,,save/*.svg,"asset riotshieldxray_mp",confirmed
+vacuum_shotgun,Vacuum Shotgun (space),,,symbol_strings.txt,"asset vacuum_shotgun / vacuum_shotgun_explode",confirmed
+vacuum_railgun,Vacuum Railgun (space),,,symbol_strings.txt,"asset vacuum_railgun; vacuum_bullet_*",confirmed
+lunarrifle,Lunar Rifle (space),,,2-nx1mp.map,"string lunarrifle",likely

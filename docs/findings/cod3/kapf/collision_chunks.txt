@@ -1,0 +1,9 @@
+=== KAPF Collision/Brush Chunks ===
+Source: mp/mpmaynne/mpmaynne.cod
+Total: 1
+
+Section: COL
+Offset: 0xc1215e
+Header (hex): 434f4c4f523100cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd
+Header (ascii): COLOR1..........................................................
+

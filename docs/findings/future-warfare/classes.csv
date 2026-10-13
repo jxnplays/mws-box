@@ -1,0 +1,12 @@
+category,internal_name,value,source_file,evidence,confidence
+slot_count,CLASS_NUM_COUNT,unknown,0-Nightly MP maps.mp.pdb;6-nx1mp_fast_server.pdb,"string 'classnum != CLASS_NUM_COUNT'; CLASS_SLOT",likely
+custom_class,customClasses,unknown,0-Nightly MP maps.mp.pdb,"customClasses string; ui_customClassName",likely
+custom_class,MENU_RESETCUSTOMCLASSES,unknown,0-Nightly MP maps.mp.pdb,"menu string",likely
+restriction,ui_allow_classchange,0,console_mp.log,"dvar set ui_allow_classchange 0 (observed)",confirmed
+restriction,ui_allow_teamchange,1,console_mp.log,"dvar set ui_allow_teamchange 1 (observed)",confirmed
+default_data,mp/defaultStructuredData.def,file,2-nx1mp.map,"asset reference string",confirmed
+default_data,mp/playerdata.def,file,2-nx1mp.map,"asset reference string",confirmed
+default_data,mp/defaultStringTable.csv,file,2-nx1mp.map,"asset reference string",confirmed
+unlock_page,page_unlocks_weapons,unknown,symbol_strings.txt,"unlock UI page",likely
+unlock_page,page_unlocks_perks,unknown,symbol_strings.txt,"unlock UI page",likely
+slot,CLASS_SLOT,index,0-Nightly MP maps.mp.pdb,"CLASS_SLOT $CFi",likely

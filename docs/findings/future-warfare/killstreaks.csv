@@ -1,0 +1,37 @@
+internal_name,display_name,script,airdrop_dvar,airdrop_value,source_file,notes,confidence
+airdrop,Care Package,maps/mp/killstreaks/_airdrop.gsc,scr_airdrop_ammo,15,save/*.svg;console_mp.log,"airdrop script + marker assets",confirmed
+airdrop_mega,Mega Airdrop,maps/mp/killstreaks/_airdrop.gsc,scr_airdrop_mega_*,*,save/*.svg;console_mp.log,"mega airdrop variant",confirmed
+airstrike,Airstrike,maps/mp/killstreaks/_airstrike.gsc,scr_airdrop_precision_airstrike,6,save/*.svg;console_mp.log,"airstrike_mp asset",confirmed
+precision_airstrike,Precision Airstrike,maps/mp/killstreaks/_airstrike.gsc,scr_airdrop_precision_airstrike,6,save/*.svg,"case ""precision_airstrike""",confirmed
+stealth_airstrike,Stealth Airstrike,maps/mp/killstreaks/_airstrike.gsc,scr_airdrop_stealth_airstrike,3,save/*.svg,"case ""stealth_airstrike""; stealth_bomb_mp",confirmed
+super_airstrike,Super Airstrike,maps/mp/killstreaks/_airstrike.gsc,,,save/*.svg,"case ""super_airstrike""",confirmed
+counter_uav,Counter-UAV,maps/mp/killstreaks/_uav.gsc,scr_airdrop_counter_uav,11,save/*.svg;console_mp.log,"case ""counter_uav""",confirmed
+double_uav,Double UAV,maps/mp/killstreaks/_uav.gsc,,,save/*.svg,"case ""double_uav""",confirmed
+uav,UAV,maps/mp/killstreaks/_uav.gsc,scr_airdrop_uav,15,save/*.svg;console_mp.log,"killstreak_uav_mp; case ""uav""",confirmed
+uav_strike,UAV Strike,maps/mp/killstreaks/_uav.gsc,scr_airdrop_uav_strike,3,save/*.svg;console_mp.log,"uav_strike_projectile_mp; uavstrikebinoculars_mp",confirmed
+emp,EMP,maps/mp/killstreaks/_emp.gsc,scr_airdrop_emp,1,save/*.svg;console_mp.log,"_emp.gsc",confirmed
+harrier,Harrier,maps/mp/killstreaks/_harrier.gsc,,,save/*.svg,"_harrier.gsc; harrier_20mm_mp / harrier_missile_mp / harrier_airstrike",confirmed
+helicopter,Attack Helicopter,maps/mp/killstreaks/_helicopter.gsc,scr_airdrop_helicopter,5,save/*.svg;console_mp.log,"helicopter_mp; chopper.health=500",confirmed
+helicopter_flares,Helicopter (Flares),maps/mp/killstreaks/_helicopter.gsc,scr_airdrop_helicopter_flares,4,save/*.svg,"case ""helicopter_flares""",confirmed
+helicopter_minigun,Helicopter (Minigun),maps/mp/killstreaks/_helicopter.gsc,scr_airdrop_helicopter_minigun,3,save/*.svg,"case ""helicopter_minigun""",confirmed
+helicopter_mk19,Helicopter (Mk19),maps/mp/killstreaks/_helicopter.gsc,,,save/*.svg,"case ""helicopter_mk19""",confirmed
+helicopter_blackbox,Helicopter (Black Box),maps/mp/killstreaks/_helicopter.gsc,,,save/*.svg,"case ""helicopter_blackbox""",confirmed
+lockseekdie,Lock-Seek-Die,maps/mp/killstreaks/_lockseekdie.gsc,scr_airdrop_lockseekdie,3,save/*.svg;console_mp.log,"_lockseekdie.gsc; lsdguidedmissile_mp; lsdnightravenmissile_mp",confirmed
+nuke,Nuke,maps/mp/killstreaks/_nuke.gsc,,,save/*.svg,"_nuke.gsc; nuke_mp; scr_nukeTimer 10",confirmed
+reaper,Reaper,maps/mp/killstreaks/_reaper.gsc,,,save/*.svg,"case ""reaper""",confirmed
+remote_mortar,Remote Mortar,maps/mp/killstreaks/_remotemissile.gsc,scr_airdrop_remote_mortar,3,save/*.svg;console_mp.log,"remote_mortar_missile_mp; case ""remote_mortar""",confirmed
+remotemissile,Remote Missile,maps/mp/killstreaks/_remotemissile.gsc,,,save/*.svg,"remotemissile_projectile_mp",confirmed
+sentry,Sentry Gun,maps/mp/killstreaks/_autosentry.gsc,scr_airdrop_sentry,6,save/*.svg;console_mp.log,"_autosentry.gsc; sentry_minigun_mp; sentry_gl",confirmed
+exosuit,Exosuit,maps/mp/killstreaks/_exosuit.gsc,scr_airdrop_exosuit,2,save/*.svg;console_mp.log,"_exosuit.gsc; mp/exosuitTable.csv",confirmed
+spider,Spider,maps/mp/killstreaks/_spider.gsc,,,save/*.svg,"_spider.gsc; nx_spider_mp; nx_vehicle_spider",confirmed
+blueshell,Blue Shell,maps/mp/killstreaks/_blueshell.gsc,,,save/*.svg,"_blueshell.gsc",confirmed
+rodsofgod,Rods of God,maps/mp/killstreaks/_rodsofgod.gsc,,,save/*.svg,"_rodsofgod.gsc",confirmed
+jet,Civilian Jet,maps/mp/killstreaks/_jet.gsc,,,save/*.svg,"_jet.gsc; civilian_jet_flyby",confirmed
+weapdrop,Weapon Drop,maps/mp/killstreaks/_weapdrop.gsc,,,save/*.svg,"_weapdrop.gsc; case ""weapdrop""",confirmed
+predator_missile,Predator Missile,maps/mp/killstreaks/_remotemissile.gsc,scr_airdrop_predator_missile,8,save/*.svg;console_mp.log,"case ""predator_missile""",confirmed
+hijacker_airdrop,Hijacker Airdrop,maps/mp/killstreaks/_airdrop.gsc,,,save/*.svg,"case ""hijacker_airdrop""",confirmed
+pavelow,Pave Low,maps/mp/killstreaks/_helicopter.gsc,,,save/*.svg,"pavelow_mp / pavelow_minigun_mp",confirmed
+ac130,AC-130,maps/mp/killstreaks/_ac130.gsc,scr_airdrop_ac130,2,save/*.svg;console_mp.log,"_ac130.gsc; ac130_105mm/25mm/40mm_mp; maxhealth 1000",confirmed
+minigun_turret,Minigun Turret,,scr_airdrop_minigun_turret,5,save/*.svg;console_mp.log,"manned_minigun_turret_mp; minigun_turret case",confirmed
+roboturret,Robot Turret (prototype),,,"",save/*.svg,"//PROTOTYPE Roboturret; ugv_robo_turret_mp; proto_robot_dog_turret_mp",confirmed
+nightraven,Night Raven,,,"",save/*.svg,"Night Raven (lock-seek-die target); aerial_explosion_mi28_flying_mp",confirmed
