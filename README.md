@@ -33,6 +33,9 @@ Additional titles are treated as namespaces / DLC categories (the same way other
 
 Also includes mashup content from the IW4L mashup fork (Skate 3 and Minecraft) where applicable.
 
+
+**Always build from source.** No prebuilt binaries are distributed. Clone this repository and follow the upstream IW4L build instructions. See [docs/BUILD-FROM-SOURCE.md](docs/BUILD-FROM-SOURCE.md).
+
 ---
 
 ## Building
