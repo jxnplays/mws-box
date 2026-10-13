@@ -1,6 +1,6 @@
 # NX1 Fastfile and Viewmodel Notes
-## Private working document — not for publication
 
+Public research notes. No game assets are included.
 **Status:** One weapon (SCAR Mod 2) is playable in the client. It renders, aims, fires, reloads, and swaps. NX1 textures are not yet bound (donor textures are used). Sounds are not wired.  
 **Goal:** One real NX1 gun that feels native in IW4L.  
 **Scope:** Call of Duty Future Warfare (NX1) multiplayer assets, starting with the SCAR Mod 2.
