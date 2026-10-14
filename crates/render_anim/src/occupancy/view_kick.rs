@@ -21,7 +21,7 @@ use crate::anim::view_kick_state::{KickParams, ViewKickState, add_kick_to_viewan
 use crate::anim::view_sway::ViewSwayState;
 use crate::occupancy::remote_body::RemotePlayer;
 use crate::occupancy::third_person::{
-    linked_weapon_camera, presented_is_third_person, remote_missile_camera, third_person_camera,
+    RemoteMissileView, linked_weapon_camera, presented_is_third_person, third_person_camera,
 };
 use render_scene::{FlyCamera, FpvLens, SimCamera, transform_from_iw_view};
 use render_scene::{WorldCameraPose, WorldScriptModelInstance};
@@ -228,6 +228,7 @@ pub fn sync_camera_from_presented(
     mut lenses: Query<&mut Projection, With<FpvLens>>,
     view: Res<ViewSubject>,
     death_cam_clip: Res<crate::occupancy::dyn_ent::DynEntPhysClip>,
+    mut missile_view: Local<RemoteMissileView>,
 ) {
     kick.killcam_focus_distance = None;
     if let Some(view) = sim_cam.view_override {
@@ -283,7 +284,12 @@ pub fn sync_camera_from_presented(
         kick.killcam_focus_distance = focus_distance;
         return;
     }
-    if let Some(pose) = remote_missile_camera(&presented, local.0, clock.time()) {
+    if let Some(pose) = missile_view.camera(
+        &presented,
+        local.0,
+        clock.time(),
+        death_cam_clip.0.as_deref(),
+    ) {
         let pose = earthquake_pose(pose, &presented, clock.time());
         let eye = transform_from_iw_view(pose);
         for mut transform in &mut q {

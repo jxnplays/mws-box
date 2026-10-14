@@ -1,6 +1,5 @@
 use std::collections::{HashMap, HashSet, VecDeque};
 use std::fmt;
-use std::net::ToSocketAddrs;
 use std::path::PathBuf;
 use std::sync::atomic::{AtomicU64, Ordering};
 use std::sync::{Arc, Mutex};
@@ -12,9 +11,8 @@ use master_protocol::{
     ALPN, AdmissionFailure, AdvertId, ContentFlags, ControlFrame, ControlHello, ControlRequest,
     ControlResponse, EndpointRole, MAX_BOOTSTRAP_STREAM_BYTES, MAX_CONCURRENT_BOOTSTRAP,
     MAX_RELAY_UNI_STREAMS, MemberId, RelayDatagram, RequestBody, ResponseBody, RoomView,
-    SESSION_IDLE, SESSION_KEEP_ALIVE, SessionCloseReason, decode_relay, decode_relay_stream,
-    decode_stream_payload, encode_relay, encode_relay_stream, encode_stream_frame,
-    stream_frame_len,
+    SESSION_IDLE, SessionCloseReason, decode_relay, decode_relay_stream, decode_stream_payload,
+    encode_relay, encode_relay_stream, encode_stream_frame, stream_frame_len,
 };
 use quinn::crypto::rustls::QuicClientConfig;
 use tokio_util::sync::CancellationToken;
@@ -37,48 +35,23 @@ pub use population::CommunityPlayerCounts;
 type Error = Box<dyn std::error::Error + Send + Sync>;
 type Result<T> = std::result::Result<T, Error>;
 
-pub const CONTENT_IW4: u8 = 1 << 0;
-pub const CONTENT_IW5: u8 = 1 << 1;
-pub const CONTENT_T5: u8 = 1 << 2;
-pub const CONTENT_T6: u8 = 1 << 3;
+pub const CONTENT_IW4: u8 = ContentFlags::IW4.0;
 
 pub const fn content_inventory(iw4: bool, iw5: bool, t5: bool, t6: bool) -> ContentFlags {
     ContentFlags(
-        (if iw4 { CONTENT_IW4 } else { 0 })
-            | (if iw5 { CONTENT_IW5 } else { 0 })
-            | (if t5 { CONTENT_T5 } else { 0 })
-            | (if t6 { CONTENT_T6 } else { 0 }),
+        (if iw4 { ContentFlags::IW4.0 } else { 0 })
+            | (if iw5 { ContentFlags::IW5.0 } else { 0 })
+            | (if t5 { ContentFlags::T5.0 } else { 0 })
+            | (if t6 { ContentFlags::T6.0 } else { 0 }),
     )
 }
 
-pub fn content_required_by_map(map: &str) -> Result<ContentFlags> {
-    let namespace = map
-        .split_once(':')
-        .map_or("iw4", |(namespace, _)| namespace);
-    Ok(ContentFlags(match namespace {
-        "iw4" => CONTENT_IW4,
-        "iw5" => CONTENT_IW5,
-        "t5" => CONTENT_T5,
-        "t6" => CONTENT_T6,
-        other => return Err(format!("unknown content namespace `{other}` in map `{map}`").into()),
-    }))
-}
-
 pub fn content_names(flags: ContentFlags) -> String {
-    let mut names = Vec::new();
-    if flags.0 & CONTENT_IW4 != 0 {
-        names.push("iw4");
-    }
-    if flags.0 & CONTENT_IW5 != 0 {
-        names.push("iw5");
-    }
-    if flags.0 & CONTENT_T5 != 0 {
-        names.push("t5");
-    }
-    if flags.0 & CONTENT_T6 != 0 {
-        names.push("t6");
-    }
-    if flags.0 & !(CONTENT_IW4 | CONTENT_IW5 | CONTENT_T5 | CONTENT_T6) != 0 {
+    let mut names: Vec<_> = ContentFlags::FAMILIES
+        .into_iter()
+        .filter_map(|(name, flag)| flags.contains(flag).then_some(name))
+        .collect();
+    if !ContentFlags::KNOWN.contains(flags) {
         names.push("unknown");
     }
     names.join(",")
@@ -89,7 +62,12 @@ const HOST_DATA_CAP: usize = 64;
 const HOST_CONTROL_CAP: usize = 32;
 
 const BOOTSTRAP_PRIORITY: i32 = -32;
-const IO_DEADLINE: Duration = Duration::from_secs(8);
+const DNS_DEADLINE: Duration = Duration::from_secs(8);
+const CONNECT_RETRY_FIRST: Duration = Duration::from_secs(1);
+const CONNECT_RETRY_MAX: Duration = Duration::from_secs(6);
+const CONNECT_RACE: usize = 4;
+const CONNECT_BUDGET: Duration = SESSION_IDLE;
+const CLIENT_KEEP_ALIVE: Duration = Duration::from_millis(250);
 const LEAVE_DRAIN: Duration = Duration::from_millis(500);
 const DATAGRAM_SEND_BUFFER: usize = 1024 * 1024;
 const QUEUE_POLL: Duration = Duration::from_millis(5);
@@ -1076,122 +1054,135 @@ fn browser_worker(
     };
     runtime.block_on(async move {
         loop {
-            if cancel.is_cancelled() {
+            let Err(error) = browse(&target, &state, &refresh, &cancel).await else {
                 return;
-            }
-            state.lock().expect("master browser state poisoned").loading = true;
-            let result: Result<(u64, Vec<master_protocol::Advert>, u64)> =
-                io_timeout(&cancel, async {
-                    let (_endpoint, connection) = connect(&target, &cancel).await?;
-                    let (mut send, mut recv) = io_timeout(&cancel, connection.open_bi()).await?;
-                    send.set_priority(0)?;
-                    write_frame(
-                        &mut send,
-                        &ControlFrame::Hello(ControlHello {
-                            protocol_version: master_protocol::PROTOCOL_VERSION,
-                            game_protocol: crate::PROTOCOL_VERSION,
-                            role: EndpointRole::Cli,
-                            build: endpoint_build(),
-                            player_name: String::new(),
-                        }),
-                    )
-                    .await?;
-                    write_frame(
-                        &mut send,
-                        &ControlFrame::Request(ControlRequest {
-                            request_id: 1,
-                            body: RequestBody::ListRooms,
-                        }),
-                    )
-                    .await?;
-                    loop {
-                        match read_frame(&mut recv).await? {
-                            ControlFrame::Response(ControlResponse {
-                                request_id: 1,
-                                body:
-                                    ResponseBody::RoomList {
-                                        generation,
-                                        adverts,
-                                    },
-                            }) => {
-                                return Result::Ok((
-                                    generation,
-                                    adverts,
-                                    connection.rtt().as_millis().max(1) as u64,
-                                ));
-                            }
-                            ControlFrame::Response(ControlResponse {
-                                body: ResponseBody::Error(error),
-                                ..
-                            }) => return Err(error.into()),
-                            ControlFrame::RoomView(_)
-                            | ControlFrame::Closed { .. }
-                            | ControlFrame::PeerEvent(_)
-                            | ControlFrame::Hello(_)
-                            | ControlFrame::Relay(_) => {}
-                            other => {
-                                return Err(format!("unexpected browser frame {other:?}").into());
-                            }
-                        }
-                    }
-                })
-                .await;
+            };
             let mut current = state.lock().expect("master browser state poisoned");
             current.loading = false;
-            match result {
-                Ok((generation, adverts, ping_ms)) => {
-                    current.ping_ms = Some(ping_ms);
-                    current.generation = generation;
-                    let have = current.have;
-                    current.adverts = adverts
-                        .into_iter()
-                        .map(|advert| MasterAdvert {
-                            id: advert.id,
-                            name: advert.name,
-                            map: advert.map,
-                            mode: advert.mode,
-                            players: advert.players,
-                            max_players: advert.max_players,
-                            locked: advert.locked,
-                            in_match: advert.in_match,
-                            requires: advert.requires,
-                            available: advert.available,
-                            password_protected: advert.password_protected,
-                            missing: advert.requires.missing_from(have),
-                        })
-                        .collect();
-                    current.error = None;
-                }
-                Err(error) => {
-                    current.ping_ms = None;
-                    let message = error.to_string();
-                    if !cancel.is_cancelled() && current.error.as_deref() != Some(message.as_str())
-                    {
-                        diag::warn!(
-                            Net,
-                            "master browser request failed target={} server_name={}: {}",
-                            target.address,
-                            target.server_name,
-                            message
-                        );
-                    }
-                    current.error = Some(message);
-                }
+            current.ping_ms = None;
+            let message = error.to_string();
+            if !cancel.is_cancelled() && current.error.as_deref() != Some(message.as_str()) {
+                diag::warn!(
+                    Net,
+                    "master browser request failed target={} server_name={}: {}",
+                    target.address,
+                    target.server_name,
+                    message
+                );
             }
+            current.error = Some(message);
             drop(current);
-
-            let seen_refresh = refresh.load(Ordering::Relaxed);
-            for _ in 0..50 {
-                tokio::select! {
-                    _ = cancel.cancelled() => return,
-                    _ = tokio::time::sleep(Duration::from_millis(100)) => {}
-                }
-                if refresh.load(Ordering::Relaxed) != seen_refresh {
-                    break;
-                }
+            if !wait_for_refresh(&refresh, &cancel).await {
+                return;
             }
         }
     });
+}
+
+async fn browse(
+    target: &MasterTarget,
+    state: &Mutex<MasterBrowserSnapshot>,
+    refresh: &AtomicU64,
+    cancel: &CancellationToken,
+) -> Result<()> {
+    state.lock().expect("master browser state poisoned").loading = true;
+    let (_endpoint, connection) = connect(target, cancel).await?;
+    let (mut send, mut recv) = cancellable(cancel, connection.open_bi()).await?;
+    send.set_priority(0)?;
+    write_frame(
+        &mut send,
+        &ControlFrame::Hello(ControlHello {
+            protocol_version: master_protocol::PROTOCOL_VERSION,
+            game_protocol: crate::PROTOCOL_VERSION,
+            role: EndpointRole::Cli,
+            build: endpoint_build(),
+            player_name: String::new(),
+        }),
+    )
+    .await?;
+    let mut request_id = 0_u64;
+    loop {
+        request_id += 1;
+        state.lock().expect("master browser state poisoned").loading = true;
+        write_frame(
+            &mut send,
+            &ControlFrame::Request(ControlRequest {
+                request_id,
+                body: RequestBody::ListRooms,
+            }),
+        )
+        .await?;
+        let (generation, adverts) = loop {
+            let frame = tokio::select! {
+                _ = cancel.cancelled() => return Ok(()),
+                frame = read_frame(&mut recv) => frame?,
+            };
+            match frame {
+                ControlFrame::Response(ControlResponse {
+                    request_id: id,
+                    body:
+                        ResponseBody::RoomList {
+                            generation,
+                            adverts,
+                        },
+                }) if id == request_id => break (generation, adverts),
+                ControlFrame::Response(ControlResponse {
+                    body: ResponseBody::Error(error),
+                    ..
+                }) => return Err(error.into()),
+                ControlFrame::Response(_)
+                | ControlFrame::RoomView(_)
+                | ControlFrame::Closed { .. }
+                | ControlFrame::PeerEvent(_)
+                | ControlFrame::Hello(_)
+                | ControlFrame::Relay(_) => {}
+                other => {
+                    return Err(format!("unexpected browser frame {other:?}").into());
+                }
+            }
+        };
+        let mut current = state.lock().expect("master browser state poisoned");
+        current.loading = false;
+        current.ping_ms = Some(connection.rtt().as_millis().max(1) as u64);
+        current.generation = generation;
+        let have = current.have;
+        current.adverts = adverts
+            .into_iter()
+            .map(|advert| MasterAdvert {
+                id: advert.id,
+                name: advert.name,
+                map: advert.map,
+                mode: advert.mode,
+                players: advert.players,
+                max_players: advert.max_players,
+                locked: advert.locked,
+                in_match: advert.in_match,
+                requires: advert.requires,
+                available: advert.available,
+                password_protected: advert.password_protected,
+                missing: advert.requires.missing_from(have),
+            })
+            .collect();
+        current.error = None;
+        drop(current);
+        if !wait_for_refresh(refresh, cancel).await {
+            return Ok(());
+        }
+    }
+}
+
+async fn wait_for_refresh(refresh: &AtomicU64, cancel: &CancellationToken) -> bool {
+    let seen_refresh = refresh.load(Ordering::Relaxed);
+    for _ in 0..50 {
+        tokio::select! {
+            _ = cancel.cancelled() => return false,
+            _ = tokio::time::sleep(Duration::from_millis(100)) => {}
+        }
+        if refresh.load(Ordering::Relaxed) != seen_refresh {
+            break;
+        }
+    }
+    true
 }
 
 struct WorkerCtx {
@@ -1687,7 +1678,7 @@ async fn session_main(
         crate::PROTOCOL_VERSION,
         identity.attempt_id
     );
-    let (mut send, recv) = io_timeout(&cancel, connection.open_bi())
+    let (mut send, recv) = cancellable(&cancel, connection.open_bi())
         .await
         .map_err(|error| TransportFault::with_connection("open_bi", role, error, &connection))?;
     send.set_priority(0).map_err(|error| {
@@ -3038,29 +3029,19 @@ async fn uni_ingress(
                         ));
                     }
                 };
-                let bytes = match tokio::time::timeout(
-                    IO_DEADLINE,
-                    recv.read_to_end(MAX_BOOTSTRAP_STREAM_BYTES),
-                )
-                .await
-                {
-                    Ok(Ok(bytes)) => bytes,
-                    Ok(Err(error)) => {
-                        return Err(TransportFault::with_connection(
-                            "bootstrap_uni_read",
-                            role,
-                            error,
-                            &connection,
-                        ));
-                    }
-                    Err(_) => {
-                        return Err(TransportFault::with_connection(
-                            "bootstrap_uni_read",
-                            role,
-                            "deadline",
-                            &connection,
-                        ));
-                    }
+                let bytes = tokio::select! {
+                    _ = cancel.cancelled() => return Ok(()),
+                    read = recv.read_to_end(MAX_BOOTSTRAP_STREAM_BYTES) => match read {
+                        Ok(bytes) => bytes,
+                        Err(error) => {
+                            return Err(TransportFault::with_connection(
+                                "bootstrap_uni_read",
+                                role,
+                                error,
+                                &connection,
+                            ));
+                        }
+                    },
                 };
                 match decode_relay_stream(&bytes) {
                     Ok(RelayDatagram::ServiceToMember(payload) | RelayDatagram::HostToMember { payload, .. }) => {
@@ -3211,7 +3192,7 @@ async fn send_bootstrap_stream(
             connection,
         ));
     }
-    let mut send = io_timeout(cancel, connection.open_uni())
+    let mut send = cancellable(cancel, connection.open_uni())
         .await
         .map_err(|error| {
             TransportFault::with_connection("open_bootstrap_uni", role, error, connection)
@@ -3219,7 +3200,7 @@ async fn send_bootstrap_stream(
     send.set_priority(BOOTSTRAP_PRIORITY).map_err(|error| {
         TransportFault::with_connection("bootstrap_priority", role, error, connection)
     })?;
-    io_timeout(cancel, send.write_all(&bytes))
+    cancellable(cancel, send.write_all(&bytes))
         .await
         .map_err(|error| {
             TransportFault::with_connection("bootstrap_uni_write", role, error, connection)
@@ -3251,31 +3232,33 @@ async fn write_frame(send: &mut quinn::SendStream, frame: &ControlFrame) -> Resu
     Ok(())
 }
 
-async fn io_timeout<T>(
+async fn cancellable<T>(
     cancel: &CancellationToken,
     fut: impl std::future::Future<Output = std::result::Result<T, impl Into<Error>>>,
 ) -> Result<T> {
     tokio::select! {
         _ = cancel.cancelled() => Err("session cancelled".into()),
-        result = tokio::time::timeout(IO_DEADLINE, fut) => {
+        result = fut => result.map_err(Into::into),
+    }
+}
+
+async fn dns_timeout<T>(
+    cancel: &CancellationToken,
+    fut: impl std::future::Future<Output = std::result::Result<T, impl Into<Error>>>,
+) -> Result<T> {
+    tokio::select! {
+        _ = cancel.cancelled() => Err("session cancelled".into()),
+        result = tokio::time::timeout(DNS_DEADLINE, fut) => {
             match result {
                 Ok(Ok(value)) => Ok(value),
                 Ok(Err(error)) => Err(error.into()),
-                Err(_) => Err("master I/O deadline".into()),
+                Err(_) => Err("master address lookup deadline".into()),
             }
         }
     }
 }
 
-async fn connect(
-    target: &MasterTarget,
-    cancel: &CancellationToken,
-) -> Result<(quinn::Endpoint, quinn::Connection)> {
-    let address = target
-        .address
-        .to_socket_addrs()?
-        .next()
-        .ok_or_else(|| format!("{} resolved no addresses", target.address))?;
+fn client_config(target: &MasterTarget) -> Result<quinn::ClientConfig> {
     let mut crypto = rustls::ClientConfig::builder()
         .with_root_certificates(updater::trust_roots(&target.ca_pem)?)
         .with_no_client_auth();
@@ -3285,49 +3268,104 @@ async fn connect(
     transport.max_idle_timeout(Some(
         quinn::IdleTimeout::try_from(SESSION_IDLE).expect("session idle fits QUIC VarInt"),
     ));
-    transport.keep_alive_interval(Some(SESSION_KEEP_ALIVE));
+    transport.keep_alive_interval(Some(CLIENT_KEEP_ALIVE));
     transport.datagram_send_buffer_size(DATAGRAM_SEND_BUFFER);
     transport.max_concurrent_uni_streams(MAX_RELAY_UNI_STREAMS.into());
+    transport.congestion_controller_factory(Arc::new(
+        master_protocol::congestion::StallTolerantConfig::default(),
+    ));
     client_config.transport_config(Arc::new(transport));
+    Ok(client_config)
+}
 
-    let bind = if address.is_ipv4() {
+async fn connect(
+    target: &MasterTarget,
+    cancel: &CancellationToken,
+) -> Result<(quinn::Endpoint, quinn::Connection)> {
+    let address = dns_timeout(cancel, tokio::net::lookup_host(target.address.as_str()))
+        .await?
+        .next()
+        .ok_or_else(|| format!("{} resolved no addresses", target.address))?;
+    let client_config = client_config(target)?;
+    let bind: std::net::SocketAddr = if address.is_ipv4() {
         "0.0.0.0:0"
     } else {
         "[::]:0"
-    };
-    let mut endpoint = quinn::Endpoint::client(bind.parse()?)?;
-    endpoint.set_default_client_config(client_config);
-    let local = endpoint.local_addr()?;
-    let trust = "community-ca";
-    diag::info!(
-        Net,
-        "master quic handshake begin local={} remote={} server_name={} trust={} alpn={:?}",
-        local,
-        address,
-        target.server_name,
-        trust,
-        ALPN
-    );
+    }
+    .parse()?;
     let started = Instant::now();
-    let connecting = endpoint.connect(address, &target.server_name)?;
-    let connection = io_timeout(cancel, connecting)
-        .await
-        .map_err(|error| -> Error {
-            format!(
-            "quic handshake: {error}; local={local} remote={address} server_name={} elapsed_ms={}",
-            target.server_name,
-            started.elapsed().as_millis()
-        )
-        .into()
-        })?;
-    diag::info!(
-        Net,
-        "master quic handshake ok local={} remote={} elapsed_ms={}",
-        local,
-        connection.remote_address(),
-        started.elapsed().as_millis()
-    );
-    Ok((endpoint, connection))
+    let deadline = tokio::time::Instant::now() + CONNECT_BUDGET;
+    let mut attempts = tokio::task::JoinSet::new();
+    let mut in_flight = VecDeque::new();
+    let mut next_attempt = tokio::time::Instant::now();
+    let mut retry = CONNECT_RETRY_FIRST;
+    let mut started_attempts = 0_u32;
+    loop {
+        if tokio::time::Instant::now() >= next_attempt {
+            if in_flight.len() == CONNECT_RACE {
+                let oldest: tokio::task::AbortHandle = in_flight.pop_front().expect("race is full");
+                oldest.abort();
+            }
+            started_attempts += 1;
+            let mut endpoint = quinn::Endpoint::client(bind)?;
+            endpoint.set_default_client_config(client_config.clone());
+            let local = endpoint.local_addr()?;
+            diag::info!(
+                Net,
+                "master quic handshake begin attempt={} local={} remote={} server_name={}",
+                started_attempts,
+                local,
+                address,
+                target.server_name
+            );
+            let connecting = endpoint.connect(address, &target.server_name)?;
+            in_flight.push_back(attempts.spawn(async move {
+                connecting
+                    .await
+                    .map(|connection| (endpoint, connection))
+                    .map_err(|error| (error, local))
+            }));
+            next_attempt += retry;
+            retry = (retry * 3 / 2).min(CONNECT_RETRY_MAX);
+        }
+        tokio::select! {
+            _ = cancel.cancelled() => return Err("session cancelled".into()),
+            _ = tokio::time::sleep_until(deadline) => {
+                return Err(format!(
+                    "quic handshake: no reply in {}ms over {started_attempts} attempts; remote={address} server_name={}",
+                    started.elapsed().as_millis(),
+                    target.server_name
+                )
+                .into());
+            }
+            _ = tokio::time::sleep_until(next_attempt) => {}
+            Some(done) = attempts.join_next() => {
+                let Ok(result) = done else { continue };
+                let (endpoint, connection) = match result {
+                    Ok(won) => won,
+                    Err((quinn::ConnectionError::TimedOut, _)) => continue,
+                    Err((error, local)) => {
+                        return Err(format!(
+                            "quic handshake: {error}; local={local} remote={address} server_name={} elapsed_ms={}",
+                            target.server_name,
+                            started.elapsed().as_millis()
+                        )
+                        .into());
+                    }
+                };
+                attempts.abort_all();
+                diag::info!(
+                    Net,
+                    "master quic handshake ok local={} remote={} attempts={} elapsed_ms={}",
+                    endpoint.local_addr()?,
+                    connection.remote_address(),
+                    started_attempts,
+                    started.elapsed().as_millis()
+                );
+                return Ok((endpoint, connection));
+            }
+        }
+    }
 }
 
 fn handshake_for_match(
