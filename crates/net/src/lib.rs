@@ -145,11 +145,10 @@ pub use transport::frame::{
 };
 pub use transport::loopback_live::{ListenLoopback, ReceivedTick};
 pub use transport::master::{
-    CONTENT_IW4, CONTENT_IW5, CONTENT_T5, CommunityPlayerCounts, MasterAdvert, MasterBridge,
-    MasterBridgeState, MasterBrowser, MasterBrowserSnapshot, MasterLaunchIntent,
-    MasterLifecycleFact, MasterMatchOffer, MasterMatchStart, MasterMenuAction,
-    PendingMasterMenuAction, SessionIdentity, TransportFault, content_inventory, content_names,
-    content_required_by_map,
+    CONTENT_IW4, CommunityPlayerCounts, MasterAdvert, MasterBridge, MasterBridgeState,
+    MasterBrowser, MasterBrowserSnapshot, MasterLaunchIntent, MasterLifecycleFact,
+    MasterMatchOffer, MasterMatchStart, MasterMenuAction, PendingMasterMenuAction, SessionIdentity,
+    TransportFault, content_inventory, content_names,
 };
 pub use transport::meta_wire::{
     SnapshotMetaSectionBytes, WORLD_SYNC_PERIOD_TICKS, WorldObjectSyncDecoder,
@@ -175,6 +174,6 @@ pub use transport::wire::{WireError, WireReader, WireWriter};
 
 pub use svc_script_audio::SvcScriptAudio;
 
-pub const PROTOCOL_VERSION: u32 = 116;
+pub const PROTOCOL_VERSION: u32 = 118;
 
 pub use client::fire_verdict::{FireVerdictState, PredictedFireStatus};

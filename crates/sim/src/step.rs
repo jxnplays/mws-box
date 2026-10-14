@@ -393,6 +393,7 @@ fn run_players_system(ecs: &mut World) {
             crate::script::player_commands(world.ecs(), id.0, cmd.buttons, old_buttons);
             let mut cmd = *cmd;
             crate::script_player::constrain_cmd(&mut world, *id, &mut cmd);
+            crate::script::hold_killcam_viewer(world.ecs(), *id, &mut cmd);
             crate::script::select_location(world.ecs(), id.0, &mut cmd, old_buttons);
             if world
                 .client_meta(*id)

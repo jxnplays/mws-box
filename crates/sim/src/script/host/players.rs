@@ -1061,17 +1061,32 @@ impl PlayerSlot {
 }
 
 pub(crate) fn script_seats(world: &World) -> Vec<(ClientId, crate::ScriptSeat)> {
-    world
-        .resource::<RoundScript>()
+    let runtime = world.resource::<RoundScript>();
+    let final_kill = level_flag(runtime, "showingfinalkillcam");
+    runtime
         .players
         .iter()
         .filter(|(_, slot)| &*slot.sessionstate == "spectator" && slot.spectator.target.is_some())
         .map(|(client, slot)| {
             let mut seat = slot.seat;
             seat.spectator_client = slot.spectator.target.unwrap() as i32;
+            seat.final_kill = final_kill;
             (ClientId(*client), seat)
         })
         .collect()
+}
+
+fn level_flag(runtime: &RoundScript, name: &str) -> bool {
+    let symbol = runtime
+        .program
+        .as_ref()
+        .and_then(|program| program.symbol_ids.get(name))
+        .or_else(|| runtime.dynamic_symbols.get(name));
+    match symbol.and_then(|symbol| runtime.objects.get(&0)?.get(symbol)) {
+        Some(Value::Int(n)) => *n != 0,
+        Some(Value::Float(f)) => *f != 0.0,
+        _ => false,
+    }
 }
 
 const SEAT_FIELDS: [&str; 6] = [

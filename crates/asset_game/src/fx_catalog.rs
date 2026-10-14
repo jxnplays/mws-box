@@ -274,6 +274,8 @@ pub struct OwnedFxElemDef {
     pub trail_def: Option<OwnedFxTrailDef>,
 
     pub spark_fountain_def: Option<OwnedFxSparkFountainDef>,
+
+    pub phys_pieces: Vec<Option<fx_iw4::FxPhysPiece>>,
 }
 
 impl OwnedFxElemDef {
@@ -336,6 +338,11 @@ impl OwnedFxElemDef {
             OwnedFxVisual::None => Some(AssetEdge::Absent),
             _ => None,
         }
+    }
+
+    pub fn phys_piece(&self, random_seed: u64) -> Option<fx_iw4::FxPhysPiece> {
+        let idx = fx_iw4::elem_visual_index(self.view.visual_count, random_seed);
+        self.phys_pieces.get(idx).copied().flatten()
     }
 
     pub fn decal_mark_pair(&self, random_seed: u64) -> Option<&OwnedFxVisual> {
@@ -821,9 +828,9 @@ impl FxDefinitions {
         })
     }
 
-    pub fn map_fx_name<'a>(&self, name: &'a str) -> FxName<'a> {
+    pub fn map_fx_name<'a>(&'a self, name: &'a str) -> FxName<'a> {
         match self.resolve_def_for_map(name) {
-            Some(def) => FxName::new(def.namespace, name),
+            Some(def) => FxName::new(def.namespace, &def.name),
             None => FxName::new(
                 self.map_namespace
                     .expect("effects require an explicit map family"),
@@ -862,6 +869,9 @@ impl FxDefinitions {
     }
 
     pub fn resolve_def_for_map(&self, name: &str) -> Option<&OwnedFxEffectDef> {
+        if let Some((family, name)) = name.split_once(':') {
+            return self.resolve_def_in(crate::AssetNamespace::parse(family)?, name);
+        }
         let map_ns = self
             .map_namespace
             .expect("effects require an explicit map family");
@@ -953,6 +963,15 @@ impl FxDefinitions {
                         *edge = model_hint_edge(ns, hint.as_deref(), models);
                     }
                 }
+                elem.phys_pieces =
+                    if fx_iw4::elem_skips_position_update(elem.view.elem_type, elem.view.flags) {
+                        elem.visuals
+                            .iter()
+                            .map(|vis| model_phys_piece(vis, models))
+                            .collect()
+                    } else {
+                        Vec::new()
+                    };
             }
         }
     }
@@ -1446,6 +1465,7 @@ fn capture_elem(
         has_extended,
         trail_def,
         spark_fountain_def,
+        phys_pieces: Vec::new(),
     })
 }
 
@@ -1693,6 +1713,17 @@ fn model_hint_edge(
             None => AssetEdge::Unresolved(AssetEdgeReason::CatalogMiss),
         },
     }
+}
+
+fn model_phys_piece(
+    vis: &OwnedFxVisual,
+    models: &crate::FxModelCatalog,
+) -> Option<fx_iw4::FxPhysPiece> {
+    let OwnedFxVisual::Model { edge, .. } = vis else {
+        return None;
+    };
+    let (mid, half) = models.get_at(edge.bound_index()?)?.skel.bounds?;
+    fx_iw4::FxPhysPiece::from_bounds(mid, half)
 }
 
 fn resolve_material_visual(
@@ -2056,6 +2087,7 @@ fn leftover_capture_elem_t5(
         has_extended,
         trail_def: None,
         spark_fountain_def: None,
+        phys_pieces: Vec::new(),
     })
 }
 
@@ -2490,6 +2522,19 @@ fn capture_elem_t6(
                     authored,
                 })
                 .collect()
+        } else if t == elem_type::DECAL {
+            elem.visuals
+                .chunks_exact(2)
+                .map(|pair| {
+                    let material = |name: &String| OwnedFxVisual::Material {
+                        material: authored.unresolved(),
+                        hint: Some(name.clone()).filter(|name| !name.is_empty()),
+                        material_namespace: namespace,
+                        authored,
+                    };
+                    mark_pair(material(&pair[0]), material(&pair[1]))
+                })
+                .collect()
         } else if t == elem_type::MODEL {
             elem.visuals
                 .iter()
@@ -2544,5 +2589,6 @@ fn capture_elem_t6(
         has_extended: false,
         trail_def: None,
         spark_fountain_def: None,
+        phys_pieces: Vec::new(),
     })
 }

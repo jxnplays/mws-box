@@ -36,6 +36,8 @@ pub struct MatchLoadRequest {
 struct MatchLoadTask {
     task: Task<Result<Option<PreparedMatchReady>, MapLoadFailed>>,
     request_id: u64,
+    load_key: frame::LocalLoadKey,
+    zone: String,
     progress: LoadProgress,
 }
 
@@ -141,6 +143,7 @@ fn start_match_load(
     let load_key = request.load_key;
     let zone = request.zone.clone();
     let zone_accepted = zone.clone();
+    let zone_task = zone.clone();
     let cancel_handle = progress.clone();
     // The process outlives the overlay and every task this spawns: it is what
     // the table reads, what admission finishes, and what the bench still has
@@ -224,6 +227,8 @@ fn start_match_load(
             MatchLoadTask {
                 task,
                 request_id,
+                load_key,
+                zone: zone_task,
                 progress: cancel_handle,
             },
             frame::MatchScope::Loading,
@@ -257,15 +262,8 @@ fn approve_map_load(
         }
         let games = asset_transport::GamesRoot(identity.games_root.clone());
         let trees = asset_transport::NamespaceTrees::discover(&games);
-        let have = trees.present().fold(0, |mask, (ns, _)| {
-            mask | match ns.as_str() {
-                "iw4" => 1,
-                "iw5" => 2,
-                "t5" => 4,
-                "t6" => 8,
-                _ => 0,
-            }
-        });
+        let have =
+            frame::AssetFamilies::from_families(trees.present().map(|(ns, _)| ns.as_str())).0;
         let selection =
             if *role == frame::RuntimeRole::Client || !request.load_key.match_key.is_none() {
                 server_families
@@ -356,8 +354,13 @@ fn poll_match_load(
             task.request_id
         );
     }
-    let Some(outcome) = future::block_on(future::poll_once(&mut task.task)) else {
-        return;
+    let polled = std::panic::catch_unwind(std::panic::AssertUnwindSafe(|| {
+        future::block_on(future::poll_once(&mut task.task))
+    }));
+    let outcome = match polled {
+        Ok(None) => return,
+        Ok(Some(outcome)) => outcome,
+        Err(panic) => Err(walk_panic_failure(task, panic.as_ref())),
     };
     let request_id = task.request_id;
     inflight.0 = false;
@@ -416,6 +419,26 @@ fn poll_match_load(
     commands.queue(move |world: &mut World| {
         frame::scope::insert(world, ready, frame::MatchScope::Loading);
     });
+}
+
+fn walk_panic_failure(task: &MatchLoadTask, panic: &(dyn std::any::Any + Send)) -> MapLoadFailed {
+    let message = panic
+        .downcast_ref::<&str>()
+        .copied()
+        .or_else(|| panic.downcast_ref::<String>().map(String::as_str))
+        .unwrap_or("no message");
+    diag::error!(
+        World,
+        "match load: walk request #{} (`{}`) panicked: {message} — reported as a failed map load",
+        task.request_id,
+        task.zone
+    );
+    MapLoadFailed {
+        request_id: task.request_id,
+        load_key: task.load_key,
+        zone: task.zone.clone(),
+        error: format!("The load stopped on an internal error: {message}"),
+    }
 }
 
 fn expire_match_load_abort(

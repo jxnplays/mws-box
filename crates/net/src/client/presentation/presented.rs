@@ -194,6 +194,10 @@ impl PresentedSnapshot {
         self.trajectory_time_ms.unwrap_or(render_time_ms)
     }
 
+    pub fn is_archived_replay(&self) -> bool {
+        self.trajectory_time_ms.is_some()
+    }
+
     pub(crate) fn set_trajectory_sample(
         &mut self,
         time_ms: Option<i32>,

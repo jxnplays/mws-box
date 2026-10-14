@@ -3116,6 +3116,7 @@ name = "frame"
 version = "0.1.0"
 dependencies = [
  "bevy",
+ "master_protocol",
 ]
 
 [[package]]
@@ -4316,6 +4317,9 @@ dependencies = [
 [[package]]
 name = "master_protocol"
 version = "0.1.0"
+dependencies = [
+ "quinn-proto",
+]
 
 [[package]]
 name = "matchers"

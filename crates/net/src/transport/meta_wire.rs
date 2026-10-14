@@ -2210,6 +2210,9 @@ fn encode_corpse_pool(out: &mut WireWriter, pool: &PlayerCorpsePool) {
         }
         out.put_u8(u8::from(slot.falling));
         out.put_i32(slot.ground_entity_num);
+        out.put_i32(slot.spawn_time_ms);
+        out.put_u32(slot.shield.map_or(0, |shield| shield.weapon));
+        out.put_u8(u8::from(slot.shield.is_some_and(|shield| shield.on_back)));
     }
 }
 
@@ -2243,12 +2246,26 @@ fn decode_corpse_pool(input: &mut WireReader<'_>) -> Result<PlayerCorpsePool, Wi
                     tr_base: [input.get_f32()?, input.get_f32()?, input.get_f32()?],
                     falling: input.get_u8()? != 0,
                     ground_entity_num: input.get_i32()?,
+                    spawn_time_ms: input.get_i32()?,
+                    shield: decode_corpse_shield(input)?,
                 };
             }
             _ => return Err(WireError::Malformed("bad corpse slot tag")),
         }
     }
     Ok(pool)
+}
+
+fn decode_corpse_shield(
+    input: &mut WireReader<'_>,
+) -> Result<Option<sim::ShieldAttachment>, WireError> {
+    let weapon = input.get_u32()?;
+    let on_back = match input.get_u8()? {
+        0 => false,
+        1 => true,
+        _ => return Err(WireError::Malformed("bad corpse shield tag")),
+    };
+    Ok((weapon != 0).then_some(sim::ShieldAttachment { weapon, on_back }))
 }
 
 fn encode_entity_states(out: &mut WireWriter, rows: &[entity_iw4::EntityState]) {

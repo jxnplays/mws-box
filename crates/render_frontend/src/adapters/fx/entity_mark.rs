@@ -47,6 +47,11 @@ pub(crate) fn generate(
     models: &asset_world::MapXModelSceneCatalog,
 ) {
     let mut state = marks.lock();
+    state.attached.retain(|a| {
+        host.marks
+            .constructed(a.handle)
+            .is_some_and(|m| m.context as u8 == 3 && (m.context >> 16) as u16 == a.entity)
+    });
     let pending = std::mem::take(&mut state.pending);
     let before = state.unsupported_triangles;
     let before_receivers = state.unsupported_receivers;
@@ -378,6 +383,7 @@ fn stage(
             host.marks
                 .set_material_name(handle, Some(&request.material));
             host.note_models_go_fire();
+            state.attached.retain(|a| a.handle != handle);
             state.attached.push(EntityMarkAttachment {
                 entity: request.entity,
                 model: model.to_string(),
