@@ -12,6 +12,7 @@ Per-title status. Updated as work lands.
 | Modern Warfare 3 | In progress | Maps and some weapons partially wired. |
 | Black Ops 2 | In progress | Some maps confirmed. Class/weapon path open. |
 | Advanced Warfare | Needs work | Not started. |
+| Call of Duty: Ghosts | Needs work | Not started. See [ghosts.md](ghosts.md). |
 | Call of Duty Online | Research | CODOL Reborn (offline English) by Pteryla. |
 | Black Ops 3 | Needs work | Not started. |
 | Infinite Warfare | Needs work | Not started. |
