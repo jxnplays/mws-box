@@ -1,28 +1,36 @@
 # NX1 Fastfile and Viewmodel Notes
 
 Public research notes. No game assets are included.
-**Status:** One weapon (SCAR Mod 2) is playable in the client. It renders, aims, fires, reloads, and swaps. NX1 textures are not yet bound (donor textures are used). Sounds are not wired.  
-**Goal:** One real NX1 gun that feels native in IW4L.  
+**Status:** One weapon (SCAR Mod 2) loads in the client. Skeleton, geometry and hands render, but the **weapon body is see-through**, so the in-game result is not yet correct. Firing and reload cannot be judged until the mesh is solid. NX1 textures are not yet bound (donor textures are used). Sounds are not wired.
+**Goal:** One real NX1 gun that feels native in IW4L.
 **Scope:** Call of Duty Future Warfare (NX1) multiplayer assets, starting with the SCAR Mod 2.
 
 ### Live progress
 
+Percentages below reflect measured state, not intent. Where a stage is blocked by an
+upstream defect, it is marked blocked rather than counted toward completion.
+
 | Area | % | Notes |
 | --- | --- | --- |
 | Namespace / DLC plumbing | 100% | Top-level NX1 category. SCAR Mod 2 selectable as `nx1:weapon/scar2_mp`. |
-| .cast mesh reader | 100% | Skeleton, geometry, and tags parse. |
+| .cast mesh reader | 100% | Skeleton, geometry, and tags parse. Two transform defects were found and fixed — see below. The reader is complete; correct in-game posing was blocked by those defects and is not implied by this row. |
 | .cast animation reader | 100% | All 59 clips for the test weapon parse. |
 | .cast material reader | 100% | Surfaces and PNG maps extracted. |
 | Animation binding | 100% | Clips bound, including idle. |
 | Viewmodel rig | 100% | NX1 hands placed and in the draw plan. |
-| Playable in game | ~95% | Renders, aims, fires, reloads, and swaps. |
+| Playable in game | BLOCKED | Skeleton, hands and weapon body draw. **The weapon body is see-through**, so the weapon is not visually correct and its pose cannot be judged. Firing and reload are not verifiable through an invisible mesh. Not a working primary until the mesh renders solid. |
 | NX1 textures on gun | ~40% | Reader and loader work. Binding still uses donor textures. A material row minted in the walk is not equivalent to a retail row for FPV draw. |
 | NX1 sounds | 0% | WAVs staged, not wired. |
 | Generalise to all guns | ~10% | Reader is gun-agnostic. Wiring is still specific to the test weapon. |
 | Maps | 0% | Not started. |
 
-One playable weapon is roughly 70% complete. The reusable reader and converter work is roughly 90% complete. The main open problem is texture binding in first-person view.
+The reusable reader and converter work is roughly 90% complete. **The main open problem is
+weapon-body rendering, not texture binding**: the body draws see-through, which blocks
+evaluation of everything downstream of it.
 
+A reader row at 100% means the format is fully parsed. It does not mean a mesh built by
+that reader is correctly posed in-game. Those were separate states and are now called out
+separately.
 
 ---
 
@@ -58,8 +66,6 @@ Header of the first mesh:
 
 Immediately after the attribute list:
 - Little-endian count `0x1C7B` (7,291)
-- Tag `vp`
-- Stream of little-endian IEEE-754 floats
 
 ### 4. Vertex stream and following structures
 
@@ -104,11 +110,31 @@ All sixteen sequences share the shape `XX XX XX BF 00 00 00 00 YY YY YY BE/3E` (
 
 ### 6. Client load state (current)
 
-Geometry loads. `crates/assets/src/session_load/match_walk.rs` already inserts both `viewmodel_scar2_LOD0.cast` and `weapon_scar2_LOD0.cast` from the saluki export folder into the fpv and world spaces via `read_cast_xmodel`. Model is visible in first person.
+Geometry loads. `crates/assets/src/session_load/match_walk.rs` inserts both
+`viewmodel_scar2_LOD0.cast` and `weapon_scar2_LOD0.cast` from the saluki export folder into
+the fpv and world spaces via `read_cast_xmodel`.
 
-Textures resolve. The scar2 color and specular IWIs are packaged in `nx1_scar2_images.iwd` (1,049,150 bytes) and placed in `main\\`. The resolution chain is closed. Malformed-archive risk remains.
+**Two transform defects were found in the reader and fixed.** Both were format-level, not
+weapon-level, and both affected how every mesh the reader handles is posed:
 
-Sounds are not wired. Nine WAVs exist under `[local path] of Duty Future Warfare\\NX1\\output\\one-gun\\tools\\saluki\\exported_files\\nx1\\sounds\\weapons\\scar2\\`. The client has `IwdSoundIndex`. No sound IWD packaged. No aliases assigned. In-game gun uses M4 sounds.
+1. The `.cast` bone record states both a local and a world transform pair (`lp`/`lr` and
+   `wp`/`wr`). The reader was reading the local pair and storing it as a world transform.
+   The value read was correct; the space it was interpreted in was not. One bone measured
+   152 cm (60 in) from its correct position, and most bones in both the hands and the
+   weapon mesh were affected.
+2. The three translation components were assembled in the wrong order.
+
+A bind-pose invariant — at bind pose every skin matrix must be identity — is now a test
+in the reader's crate, and would have caught both defects without launching the game.
+Details are in `cast-mesh-reader.md`.
+
+Textures resolve. The scar2 color and specular IWIs are packaged in `nx1_scar2_images.iwd` (1,049,150 bytes) and placed in `main\`. The resolution chain is closed. Malformed-archive risk remains.
+
+**The weapon body currently draws see-through.** This is a separate defect from texture
+binding and blocks evaluation of the result: with an invisible mesh, in-game pose, firing
+and reload cannot be judged.
+
+Sounds are not wired. Nine WAVs are staged under the saluki export for scar2 sounds. The client has `IwdSoundIndex`. No sound IWD packaged. No aliases assigned. In-game gun uses M4 sounds.
 
 Animations are not loaded. The client supports XAnims for MW3 and BO1. No NX1 raise/reload/fire clips have been located or bound to scar2.
 
@@ -120,9 +146,11 @@ Weapon definition is empty. Scar2 is registered from .cast geometry only. No rea
 
 ### 7. What has not been done
 
+- **The weapon body does not yet render solid.** Everything downstream of it is blocked on
+  that: pose, firing and reload cannot be verified while the mesh is invisible.
 - No face/index section has been identified in the .cast.
 - No material or texture binding has been read from the .cast.
-- Malformed-archive risk in `main\\` unverified.
+- Malformed-archive risk in `main\` unverified.
 - Sounds not packaged or assigned.
 - Animations not located or bound.
 - Camo not wired.
@@ -132,12 +160,14 @@ Weapon definition is empty. Scar2 is registered from .cast geometry only. No rea
 
 ### 8. Next steps
 
-1. Package the 9 scar2 WAVs into an IWD under `sound/weapons/scar2/` and place it in `main\\`.
-2. Find the local scar2 registration site and assign sound aliases.
-3. Locate NX1 XAnims for scar2 raise/reload/fire and bind them.
-4. Register a menu icon under the scar2 name so it appears correctly in create-a-class.
-5. Bind real NX1 weapon stats (fire rate, damage, category) so it does not fall back to defaults.
-6. Do not invent a converter. Do not build the client until the path is observed or written.
+1. Make the weapon body render solid, then re-verify in-game pose.
+2. Only then: verify firing and reload, which cannot be judged through a transparent mesh.
+3. Package the 9 scar2 WAVs into an IWD under `sound/weapons/scar2/` and place it in `main\`.
+4. Find the local scar2 registration site and assign sound aliases.
+5. Locate NX1 XAnims for scar2 raise/reload/fire and bind them.
+6. Register a menu icon under the scar2 name so it appears correctly in create-a-class.
+7. Bind real NX1 weapon stats (fire rate, damage, category) so it does not fall back to defaults.
+8. Do not invent a converter. Do not build the client until the path is observed or written.
 
 All work continues under the same constraints: bounded reads, no invented structs, no full unpack scans.
 
@@ -162,4 +192,7 @@ All work continues under the same constraints: bounded reads, no invented struct
 
 ---
 
-*Table updated after audio identification session 2026-10-10. common_sound zlib-at-38 identified, not inflated. SP zlib-at-38 closed. Geometry and textures closed. Everything else open. Private. Do not publish.*
+*Table updated after audio identification session 2026-10-10; progress figures and mesh-rendering
+status corrected after a transform-defect pass, 2026-10-14. common_sound zlib-at-38 identified,
+not inflated. SP zlib-at-38 closed. Geometry and textures closed. Weapon-body rendering open.
+Everything else open.*
