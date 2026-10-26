@@ -6,6 +6,14 @@
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey)]()
 [![Base](https://img.shields.io/badge/base-IW4L%20upstream-orange)](https://github.com/vladtrc/iw4L)
 
+## Legal
+
+This project is not affiliated with, endorsed by, or sponsored by Activision, Infinity Ward, Treyarch, Sledgehammer Games, Neversoft, or any other rights holder. All trademarks and copyrights remain the property of their respective owners.
+
+You must legally obtain the games you wish to load. This repository contains only the client code, readers, and documentation. **No game assets are included.**
+
+---
+
 One client. Thirteen Call of Duty titles. Built on the latest upstream IW4L.
 
 It does not ship or download game files. It reads the legitimate installs you already own and adds per-game support so maps, guns, attachments, and modes from those installs can load and play inside the same client.
@@ -50,7 +58,6 @@ Additional titles are treated as namespaces / DLC categories (the same way other
 
 Also includes mashup content from the IW4L mashup fork (Skate 3 and Minecraft) where applicable.
 
-
 **Always build from source.** No prebuilt binaries are distributed. Clone this repository and follow the upstream IW4L build instructions. See [docs/BUILD-FROM-SOURCE.md](docs/BUILD-FROM-SOURCE.md).
 
 ---
@@ -68,7 +75,6 @@ git remote add upstream https://github.com/vladtrc/iw4L.git
 git fetch upstream
 git merge upstream/master
 ```
-
 
 ---
 
@@ -96,14 +102,6 @@ Per-title status lives in [`docs/progress/`](docs/progress/README.md).
 
 ---
 
-## Legal
-
-This project is not affiliated with, endorsed by, or sponsored by Activision, Infinity Ward, Treyarch, Sledgehammer Games, Neversoft, or any other rights holder. All trademarks and copyrights remain the property of their respective owners.
-
-You must legally obtain the games you wish to load. This repository contains only the client code, readers, and documentation. No game assets are included.
-
----
-
 ## License
 
 Project documentation and local additions are MIT. See [LICENSE](LICENSE).
@@ -121,4 +119,3 @@ Upstream IW4L is Apache-2.0. See [NOTICE](NOTICE) and [THIRD-PARTY-LICENSES.txt]
 Standalone experimental Call of Duty runtime in Rust, built on Bevy and wgpu.
 
 See the upstream repository for the latest build instructions, requirements, and controls: https://github.com/vladtrc/iw4L
-
